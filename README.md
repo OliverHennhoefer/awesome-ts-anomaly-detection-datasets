@@ -10,17 +10,18 @@ This repository aims to provide an exhaustive collection of freely available dat
 
 All datasets listed adhere to the following requirements for admission:
 - Public availability (attribution might be required)
-- Low contamination (preferably <<5%)
+- Labeled, (file-)separated and/or low contamination
 - Tabular formatting
 
 ## Overview
 
-| Dataset                                        | Subsets | Avg. Length | Features | Contaminated | Missing |   Type    |
-|:-----------------------------------------------|:-------:|:-----------:|:--------:|:------------:|:-------:|:---------:|
-| [SMD](#server-machine-dataset-smd)             |   28    |   25,300    |    38    |    4.16%     |  0.0%   |   Real    |
-| [CATS](#controlled-anomalies-time-series-cats) |    1    |  4,000,000  |    17    |    3.80%     |  0.0%   | Synthetic |
-| [AIOps](#aiops-competition)                    |    -    |      -      |    -     |      -%      |   -%    |   Real    |
-| [Yahoo! S5](#yahoo!-s5)                        |   367   |    1,561    |    1     |      -%      |   -%    |   Real    |
+| Dataset                                                                       | Subsets | Avg. Length | Features | Contaminated | Missing |    Type     | Labeled |
+|:------------------------------------------------------------------------------|:-------:|:-----------:|:--------:|:------------:|:-------:|:-----------:|:-------:|
+| [SMD](#server-machine-dataset-smd)                                            |   28    |   25,300    |    38    |    4.16%     |  0.0%   |    Real     |    -    |
+| [CATS](#controlled-anomalies-time-series-cats)                                |    1    |  4,000,000  |    17    |    3.80%     |  0.0%   |  Synthetic  |    -    |
+| [AIOps](#aiops-competition)                                                   |    -    |      -      |    -     |      -%      |   -%    |    Real     |    -    |
+| [Yahoo! S5](#yahoo!-s5)                                                       |   367   |    1,561    |    1     |      -%      |   -%    |    Real     |    -    |
+| [Tennessee Eastman Process Simulation](#tennessee-eastman-process-simulation) |   367   |    1,561    |    1     |      -%      |   -%    |  Synthetic  |    -    |
 
 ## Univariate Time-Series
 
@@ -42,6 +43,18 @@ Official Paper: [Constructing Large-Scale Real-World Benchmark Datasets for AIOp
 
 ## Multivariate Time-Series
 
+### [Tennessee Eastman Process Simulation](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/6C3JR1)
+
+| Type      | Datasets | Avg. Length | Features | Contaminated | Missing |
+|:----------|---------:|:-----------:|:--------:|:------------:|:-------:|
+| Synthetic |       28 |   25,300    |    38    |    4.16%     |  0.0%   |
+
+([more](https://keepfloyding.github.io/posts/Ten-East-Proc-Intro/) and [more](https://mlad.kaspersky.com/tennessee-eastman-process-stand/))
+
+#### PyTEP
+The python package [PyTEP](https://github.com/ccreinartz11/pytep) allows for simulation of the _Tennessee Eastman Process_ with customized
+simulation scenarios and setups.
+
 ### [Server Machine Dataset](https://github.com/NetManAIOps/OmniAnomaly) (SMD)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -49,9 +62,8 @@ Official Paper: [Constructing Large-Scale Real-World Benchmark Datasets for AIOp
 |:-----|---------:|:-----------:|:--------:|:------------:|:-------:|
 | Real |       28 |   25,300    |    38    |    4.16%     |  0.0%   |
 
-The Server Machine Dataset (SMD) is a 5-week-long dataset collected from a large Internet company, consisting of data from 28 different machines grouped into three categories.
-Each machine's data is divided equally into training and testing sets, with labels provided to identify anomalies and the specific dimensions contributing to them.
-The dataset includes four main components: the training data, testing data, anomaly labels for the test set, and interpretation labels indicating which dimensions contribute to each anomaly ([more](https://github.com/NetManAIOps/OmniAnomaly)).
+The Server Machine Dataset (SMD) is a 5-week-long dataset collected from a large Internet company, consisting of data from 28 different machines of 3 groups of entities as indicated by the respective file names as `machine-<group_index>-<index>`. The subsets should be trained and tested separately.
+The dataset includes four main components: the training data (first half), testing data (latter half), test labels, and label interpretation, indicating which dimensions contribute to each anomaly ([more](https://github.com/NetManAIOps/OmniAnomaly)).
 
 ##### Citation
 Ya Su, Youjian Zhao, Chenhao Niu, Rong Liu, Wei Sun, and Dan Pei. 2019. Robust Anomaly Detection for Multivariate Time Series through Stochastic Recurrent Neural Network. In Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery & Data Mining (KDD '19). Association for Computing Machinery, New York, NY, USA, 2828–2837. https://doi.org/10.1145/3292500.3330672

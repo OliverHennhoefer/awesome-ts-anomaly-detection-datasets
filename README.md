@@ -15,13 +15,13 @@ All datasets listed adhere to the following requirements for admission:
 
 ## Overview
 
-| Dataset                                                                       | Subsets | Avg. Length | Features | Contaminated | Missing |    Type     | Labeled |
-|:------------------------------------------------------------------------------|:-------:|:-----------:|:--------:|:------------:|:-------:|:-----------:|:-------:|
-| [SMD](#server-machine-dataset-smd)                                            |   28    |   25,300    |    38    |    4.16%     |  0.0%   |    Real     |    -    |
-| [CATS](#controlled-anomalies-time-series-cats)                                |    1    |  4,000,000  |    17    |    3.80%     |  0.0%   |  Synthetic  |    -    |
-| [AIOps](#aiops-competition)                                                   |    -    |      -      |    -     |      -%      |   -%    |    Real     |    -    |
-| [Yahoo! S5](#yahoo!-s5)                                                       |   367   |    1,561    |    1     |      -%      |   -%    |    Real     |    -    |
-| [Tennessee Eastman Process Simulation](#tennessee-eastman-process-simulation) |   367   |    1,561    |    1     |      -%      |   -%    |  Synthetic  |    -    |
+| Dataset                                                                           | Subsets | Avg. Length | Features | Contaminated | Missing |    Type     | Labeled |
+|:----------------------------------------------------------------------------------|:-------:|:-----------:|:--------:|:------------:|:-------:|:-----------:|:-------:|
+| [SMD](#server-machine-dataset-smd)                                                |   28    |   25,300    |    38    |    4.16%     |  0.0%   |    Real     |    -    |
+| [CATS](#controlled-anomalies-time-series-cats)                                    |    1    |  4,000,000  |    17    |    3.80%     |  0.0%   |  Synthetic  |    -    |
+| [AIOps](#aiops-competition)                                                       |    -    |      -      |    -     |      -%      |   -%    |    Real     |    -    |
+| [Yahoo! S5](#yahoo!-s5)                                                           |   367   |    1,561    |    1     |      -%      |   -%    |    Real     |    -    |
+| [Tennessee Eastman Process Simulation](#tennessee-eastman-process-simulation-tep) |  4(21)  |  (250,000)  |    55    |      -%      |   -%    |  Synthetic  |    -    |
 
 ## Univariate Time-Series
 
@@ -43,13 +43,25 @@ Official Paper: [Constructing Large-Scale Real-World Benchmark Datasets for AIOp
 
 ## Multivariate Time-Series
 
-### [Tennessee Eastman Process Simulation](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/6C3JR1)
+### [Tennessee Eastman Process Simulation](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/6C3JR1) (TEP)
 
 | Type      | Datasets | Avg. Length | Features | Contaminated | Missing |
 |:----------|---------:|:-----------:|:--------:|:------------:|:-------:|
-| Synthetic |       28 |   25,300    |    38    |    4.16%     |  0.0%   |
+| Synthetic |   4  |   250,000   |    55    |      -%      |  0.0%   |
 
-([more](https://keepfloyding.github.io/posts/Ten-East-Proc-Intro/) and [more](https://mlad.kaspersky.com/tennessee-eastman-process-stand/))
+
+This dataverse contains dataframes named `fault_free_training.rdata`, `fault_free_testing.rdata`, `faulty_testing.rdata`, and `faulty_training.rdata`.
+
+Each dataframe has 55 columns:
+- Column 1 (‘faultNumber’) indicates fault type (1-20) in “Faulty” datasets and fault 0 (normal conditions) in “FaultFree” datasets.
+- Column 2 (‘simulationRun’) represents different random number generator states (1-500).
+- Column 3 (‘sample’) varies from 1-500 (“Training”) or 1-960 (“Testing”). TEP variables (columns 4-55) were sampled every 3 minutes over 25 hours (training) and 48 hours (testing). Faults were introduced 1 hour into training and 8 hours into testing.
+- Columns 4-55 contain process variables, with original names retained.
+
+(read [more](https://keepfloyding.github.io/posts/Ten-East-Proc-Intro/) and [more](https://mlad.kaspersky.com/tennessee-eastman-process-stand/))
+
+##### Citation
+Rieth, Cory A.; Amsel, Ben D.; Tran, Randy; Cook, Maia B., 2017, "Additional Tennessee Eastman Process Simulation Data for Anomaly Detection Evaluation", https://doi.org/10.7910/DVN/6C3JR1, Harvard Dataverse, V1
 
 #### PyTEP
 The python package [PyTEP](https://github.com/ccreinartz11/pytep) allows for simulation of the _Tennessee Eastman Process_ with customized
@@ -62,7 +74,7 @@ simulation scenarios and setups.
 |:-----|---------:|:-----------:|:--------:|:------------:|:-------:|
 | Real |       28 |   25,300    |    38    |    4.16%     |  0.0%   |
 
-The Server Machine Dataset (SMD) is a 5-week-long dataset collected from a large Internet company, consisting of data from 28 different machines of 3 groups of entities as indicated by the respective file names as `machine-<group_index>-<index>`. The subsets should be trained and tested separately.
+The Server Machine Dataset (SMD) is a 5-week-long dataset collected from a large Internet company, consisting of data from 28 different machines of 3 groups of entities as indicated by the respective file names as `machine-<group_index>-<index>.txt`. The subsets should be trained and tested separately.
 The dataset includes four main components: the training data (first half), testing data (latter half), test labels, and label interpretation, indicating which dimensions contribute to each anomaly ([more](https://github.com/NetManAIOps/OmniAnomaly)).
 
 ##### Citation

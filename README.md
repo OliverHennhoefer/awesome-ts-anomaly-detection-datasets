@@ -47,7 +47,7 @@ Official Paper: [Constructing Large-Scale Real-World Benchmark Datasets for AIOp
 
 | Type      | Datasets | Avg. Length | Features | Contaminated | Missing |
 |:----------|---------:|:-----------:|:--------:|:------------:|:-------:|
-| Synthetic |   4  |   250,000   |    55    |      -%      |  0.0%   |
+| Synthetic |    4     |   250,000   |   55    |      -%      |  0.0%   |
 
 
 This dataverse contains dataframes named `fault_free_training.rdata`, `fault_free_testing.rdata`, `faulty_testing.rdata`, and `faulty_training.rdata`.

@@ -93,13 +93,26 @@ The Water Distribution (WADI) dataset captures data from a water distribution te
 The dataset includes readings from 123 sensors and actuators, with the attack scenarios based on a cyber-physical system (CPS) attack model developed by the research team.
 During the 2 days of attacks, 15 distinct attack scenarios were executed.
 
+### [Airbus Helicopter Accelerometer](https://www.research-collection.ethz.ch/handle/20.500.11850/415151)
+The Helicopter Vibration Measurement Dataset is provided by Airbus SAS to automate the validation of vibration data and detect abnormal sensor behavior. Vibration measurements are collected from accelerometers placed at various positions on helicopters, measuring in three directions: longitudinal, vertical, and lateral.
+
 ### [Pooled Server Metric](https://github.com/eBay/RANSynCoders/tree/main/data) (PSM)
 The multivariate PSM dataset comprises 90 key performance indices (KPIs) from eBay, capturing per-minute cart volumes across various subdimensions like user location, device type, and cart types, making it suitable for analyzing temporal and spatial dependencies that reflect business availability and health.
 
 Related Publications: [Practical Approach to Asynchronous Multivariate Time Series Anomaly Detection and Localization](https://dl.acm.org/doi/10.1145/3447548.3467174) and  [Real-Time Synchronization in Neural Networks for Multivariate Time Series Anomaly Detection](https://ieeexplore.ieee.org/document/9413847)
 
+### [3W](https://github.com/petrobras/3W) (Petrobas)
+The3W Dataset consists of instances from three different sources containing undesirable events occurring in oil wells.
+Accompanying this dataset is the 3W Toolkit, a software package designed to facilitate experimentation with the dataset for specific problems related to oil well operations.
+
+Related Publications: [A realistic and public dataset with rare undesirable real events in oil wells](https://www.sciencedirect.com/science/article/pii/S0920410519306357?via%3Dihub)
+
+### [(HIL-based Augmented ICS) Security](https://github.com/icsdataset/hai) (HAI)
+The HAI dataset was collected from a realistic industrial control system (ICS) testbed augmented with a Hardware-In-the-Loop (HIL) simulator that emulates steam-turbine power generation and pumped-storage hydropower generation.
+
 ### [Industrial Control System Cyber Attack Datasets](https://sites.google.com/a/uah.edu/tommy-morris-uah/ics-data-sets)
-A collection of three datasets regarding power systems, gas pipelines and water storage tanks. 
+A collection of three datasets regarding power systems, gas pipelines and water storage tanks.
+
 
 ## 3 Honorable Mentions
 
@@ -108,3 +121,6 @@ The repository provides free access to a large collection of medical research da
 
 ### [IEEE Dataport](https://ieee-dataport.org/)
 Public hub for dataset sharing.
+
+### [NYC Taxi Traffic](https://www.kaggle.com/datasets/julienjta/nyc-taxi-traffic)
+Numbers of New Yoek taxi passengers, with five anomalies occurring during the NYC marathon, Thanksgiving, Christmas, New Years day, and a snow storm.

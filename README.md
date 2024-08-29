@@ -113,6 +113,11 @@ The HAI dataset was collected from a realistic industrial control system (ICS) t
 ### [Industrial Control System Cyber Attack Datasets](https://sites.google.com/a/uah.edu/tommy-morris-uah/ics-data-sets)
 A collection of three datasets regarding power systems, gas pipelines and water storage tanks.
 
+### [Localization Data for Person Activity](https://archive.ics.uci.edu/dataset/196/localization+data+for+person+activity)
+Data contains recordings of five people performing different activities.
+Each person wore four sensors (tags) while performing the same scenario five times.
+
+Refactored Version: [Kaggle](https://www.kaggle.com/datasets/jorekai/anomaly-detection-falling-people-events)
 
 ## 3 Honorable Mentions
 

@@ -1,4 +1,7 @@
 # Awesome Time-Series Anomaly Detection Datasets
+
+[![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
+
 The most extensive collection of publicly available **time-series datasets for anomaly detection**
 with a focus on real-world data or synthetic data that is representative of real-world data.
 
@@ -25,11 +28,13 @@ These competitions often involve tasks like anomaly detection, root cause analys
 
 Official Repository: [NetManAIOps](https://github.com/NetManAIOps/KPI-Anomaly-Detection/tree/master)
 
-### [Numenta Anomaly Benchmark](https://github.com/numenta/NAB) (NAB)
+### [Numenta Anomaly Benchmark](https://www.numenta.com/resources/htm/numenta-anomoly-benchmark/) (NAB)
 The NAB is a comprehensive framework designed to evaluate anomaly detection algorithms specifically for real-time, streaming data applications.
 It includes over 50 labeled time-series datasets from both real-world and synthetic sources, along with a novel scoring mechanism tailored for real-time detection scenarios.
 NAB provides tools for testing algorithms, a leaderboard for competitive results, and encourages contributions and collaboration from the community.
 The benchmark and its associated resources support the development and assessment of algorithms in unsupervised real-time anomaly detection.
+
+Official Repository: [Numenta](https://github.com/numenta/NAB)
 
 ## 1.2 Multivariate
 
@@ -38,7 +43,7 @@ The TEP is a benchmark dataset is designed for testing anomaly detection algorit
 It simulates a complex chemical production process with multiple operating conditions and potential faults, providing time-series data that includes normal operations as well as various types of faults or anomalies.
 The dataset is widely used to evaluate the performance of anomaly detection methods in identifying and diagnosing these faults in a realistic industrial environment.
 
-_Detailed information available [here](https://keepfloyding.github.io/posts/Ten-East-Proc-Intro/). The Python package [PyTEP](https://github.com/ccreinartz11/pytep) with customized
+_Detailed information available [here](https://keepfloyding.github.io/posts/Ten-East-Proc-Intro/). The Python package [PyTEP](https://github.com/ccreinartz11/pytep) allows for customized
 simulation scenarios and setups._
 
 ### [Server Machine Dataset](https://github.com/NetManAIOps/OmniAnomaly) (SMD)
@@ -47,6 +52,22 @@ It consists of several time-series data collected from different server machines
 The dataset includes labeled anomalies, such as spikes or drops in performance.
 
 Introducing Publication: [Robust Anomaly Detection for Multivariate Time Series through Stochastic Recurrent Neural Network](https://dl.acm.org/doi/10.1145/3292500.3330672)
+
+### [IoT: Online AD for Drinking Water Quality](https://www.spotseven.de/gecco/gecco-challenge/gecco-challenge-2018/)
+The GECCO 2018 Industrial Challenge invites participants to develop an event detection system for predicting changes in a time series of drinking water composition data, utilizing a real-world dataset provided by Thüringer Fernwasserversorgung.
+This year’s challenge emphasizes the practical application of solutions, as the winning submissions may be implemented in real-world scenarios, and for the first time, participants can submit 2-page algorithm descriptions for potential publication in the GECCO Companion.
+
+### [Application Server Dataset](https://github.com/zhhlee/InterFusion/tree/main) (ASD)
+The ASD dataset contains data of  12 application servers in a large Internet company.
+
+Corresponding Publication: [Multivariate Time Series Anomaly Detection and Interpretation using Hierarchical Inter-Metric and Temporal Embedding](https://dl.acm.org/doi/10.1145/3447548.3467075)
+
+### [Soil Moisture Active Passive](https://nsidc.org/data/smap/data) (SMAP) and [Mars Science Laboratory](https://pds-atmospheres.nmsu.edu/data_and_services/atmospheres_data/Mars/Mars.html) (MSL)
+SMAP (Soil Moisture Active Passive satellite) and MSL (Mars Science Laboratory rover) are two public datasets from NASA.
+
+Related Repository: [Telemanom](https://github.com/khundman/telemanom) and [OmniAnomaly](https://github.com/NetManAIOps/OmniAnomaly)<br/>
+Related Publications: [Detecting Spacecraft Anomalies Using LSTMs and Nonparametric Dynamic Thresholding](https://dl.acm.org/doi/10.1145/3219819.3219845) and [Robust Anomaly Detection for Multivariate Time Series through Stochastic Recurrent Neural Network](https://dl.acm.org/doi/10.1145/3292500.3330672)<br/>
+Corresponding Download Versions: [OmniAnomaly](https://github.com/NetManAIOps/OmniAnomaly)
 
 ### [Controlled Anomalies Time-Series](https://zenodo.org/records/8338435) (CATS)
 The CATS dataset is a simulated dataset designed for benchmarking anomaly detection algorithms in multivariate time series.
@@ -57,3 +78,33 @@ The dataset offers fine control over ground truth, context for anomalies, and a 
 The SKAB is a comprehensive framework designed for evaluating anomaly detection algorithms, focusing on outlier and changepoint detection in multivariate time series data.
 SKAB includes datasets, leaderboards, evaluation modules, and Python tools to support algorithm testing. The dataset consists of 35 files of time series data from sensors monitoring a testbed, with each file containing a single experiment and associated anomaly.
 SKAB provides both single-point and collective anomaly labels, making it useful for benchmarking various detection algorithms.
+
+### [SUTD & iTrust Dataset Collection](https://itrust.sutd.edu.sg/itrust-labs_datasets/)
+This collection of datasets provided by the _Singapur University of Technology and Design_ and the _iTrust Centre for Research in Cyber Security_ contains 5 different datasets suitable for benchmarking anomaly detection algorithms derived from the two available main datasets SWat and WADI (see blow).<br/>
+[_All datasets have to explicitly be requested for use._ ](https://docs.google.com/forms/d/e/1FAIpQLSdwOIR-LuFnSu5cIAzun5OQtWXcsOhmC7NtTbb-LBI1MyOcug/viewform)
+
+#### [Secure Water Treatment](https://itrust.sutd.edu.sg/itrust-labs-home/itrust-labs_swat/) (SWaT)
+The Secure Water Treatment (SWaT) dataset is a collection of data from a water treatment testbed, covering 11 days of continuous operation—7 days under normal conditions and 4 days with deliberate attack scenarios.
+The dataset includes network traffic and readings from 51 sensors and actuators, with labels indicating normal and abnormal behaviors
+During the 4 days of attacks, 41 different attack scenarios were executed based on a cyber-physical system (CPS) attack model developed by the research team.
+
+#### [Water Distriubtion](https://itrust.sutd.edu.sg/itrust-labs-home/itrust-labs_wadi/) (WADI)
+The Water Distribution (WADI) dataset captures data from a water distribution testbed over 16 days of continuous operation—14 days under normal conditions and 2 days featuring deliberate attack scenarios.
+The dataset includes readings from 123 sensors and actuators, with the attack scenarios based on a cyber-physical system (CPS) attack model developed by the research team.
+During the 2 days of attacks, 15 distinct attack scenarios were executed.
+
+### [Pooled Server Metric](https://github.com/eBay/RANSynCoders/tree/main/data) (PSM)
+The multivariate PSM dataset comprises 90 key performance indices (KPIs) from eBay, capturing per-minute cart volumes across various subdimensions like user location, device type, and cart types, making it suitable for analyzing temporal and spatial dependencies that reflect business availability and health.
+
+Related Publications: [Practical Approach to Asynchronous Multivariate Time Series Anomaly Detection and Localization](https://dl.acm.org/doi/10.1145/3447548.3467174) and  [Real-Time Synchronization in Neural Networks for Multivariate Time Series Anomaly Detection](https://ieeexplore.ieee.org/document/9413847)
+
+### [Industrial Control System Cyber Attack Datasets](https://sites.google.com/a/uah.edu/tommy-morris-uah/ics-data-sets)
+A collection of three datasets regarding power systems, gas pipelines and water storage tanks. 
+
+## 3 Honorable Mentions
+
+### [PhysioNet Open Access Databases](https://physionet.org/about/database/)
+The repository provides free access to a large collection of medical research data, supporting biomedical research and education through the availability of physiological and clinical data alongside related open-source software.
+
+### [IEEE Dataport](https://ieee-dataport.org/)
+Public hub for dataset sharing.

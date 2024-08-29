@@ -130,5 +130,10 @@ The repository provides free access to a large collection of medical research da
 ### [IEEE Dataport](https://ieee-dataport.org/) 📍
 Public hub for dataset sharing.
 
+<<<<<<< HEAD
 ### [NYC Taxi Traffic](https://www.kaggle.com/datasets/julienjta/nyc-taxi-traffic) 📍
 Numbers of New Yoek taxi passengers, with five anomalies occurring during the NYC marathon, Thanksgiving, Christmas, New Years day, and a snow storm.
+=======
+### [NYC Taxi Traffic](https://www.kaggle.com/datasets/julienjta/nyc-taxi-traffic)
+Numbers of New Yoek taxi passengers, with five anomalies occurring during the NYC marathon, Thanksgiving, Christmas, New Years day, and a snow storm.
+>>>>>>> 7e5cb2c9fd0face83a2a1218e738d30ee8ffcafb

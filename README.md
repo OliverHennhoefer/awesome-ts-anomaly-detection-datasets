@@ -5,11 +5,6 @@
 The most extensive collection of publicly available **time-series datasets for anomaly detection**
 with a focus on real-world data or synthetic data that is representative of real-world data.
 
-Most available datasets suffer from an **unrealistically high density of anomalies or unrealistically strong (artificial)
-injections of signal**, raising doubts about the practicality for the evaluation of respective algorithms.
-This repository aims to provide an exhaustive collection of publicly available datasets suitable for developing and evaluating anomaly detection algorithms.
-
-
 # 1 Datasets
 
 ## 1.1 Univariate
@@ -130,10 +125,6 @@ The repository provides free access to a large collection of medical research da
 ### [IEEE Dataport](https://ieee-dataport.org/) 📍
 Public hub for dataset sharing.
 
-<<<<<<< HEAD
+
 ### [NYC Taxi Traffic](https://www.kaggle.com/datasets/julienjta/nyc-taxi-traffic) 📍
 Numbers of New Yoek taxi passengers, with five anomalies occurring during the NYC marathon, Thanksgiving, Christmas, New Years day, and a snow storm.
-=======
-### [NYC Taxi Traffic](https://www.kaggle.com/datasets/julienjta/nyc-taxi-traffic)
-Numbers of New Yoek taxi passengers, with five anomalies occurring during the NYC marathon, Thanksgiving, Christmas, New Years day, and a snow storm.
->>>>>>> 7e5cb2c9fd0face83a2a1218e738d30ee8ffcafb

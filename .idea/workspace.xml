@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd5e8a12-3ee4-43d3-b1c4-c995e6afe6be" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/access/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/access/local/README.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/access/local/tpe_sample.parquet" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/access/smd.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/access/tep.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +37,7 @@
     "Python.tep.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/heol/Desktop/awesome-ts-anomaly-detection-datasets"
+    "last_opened_file_path": "C:/Users/heol/Desktop/awesome-multiple-hypothesis-testing"
   }
 }]]></component>
   <component name="RecentsManager">

@@ -1,6 +1,5 @@
-# Awesome Time-Series Anomaly Detection Datasets
+# Awesome Time-Series Anomaly Detection Datasets [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
-[![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
 The most extensive collection of publicly available **time-series datasets for anomaly detection**
 with a focus on real-world data or synthetic data that is representative of real-world data.
@@ -10,8 +9,10 @@ with a focus on real-world data or synthetic data that is representative of real
 ## 1.1 Univariate
 
 ### [Yahoo! S5](https://webscope.sandbox.yahoo.com/catalog.php?datatype=s&did=70) 💻
+
+> This dataset has to be [requested](https://webscope.sandbox.yahoo.com/catalog.php?datatype=s&did=70) for access.
+
 This is designed to benchmark anomaly detection algorithms using time-series data with tagged anomalies, including outliers and change-points, representing various Yahoo services and synthetic variations.
-_This dataset has to explicitly be requested for use._ 
 
 ### [AIOps Competition](https://github.com/NetManAIOps/KPI-Anomaly-Detection/tree/master) 💻
 The Chinese AIOps Competition series challenges participants to develop innovative algorithms and solutions that can automatically detect and diagnose IT system issues using large-scale datasets.
@@ -57,8 +58,10 @@ Related Publications: [Detecting Spacecraft Anomalies Using LSTMs and Nonparamet
 Corresponding Download Versions: [OmniAnomaly](https://github.com/NetManAIOps/OmniAnomaly)
 
 ### [SUTD & iTrust Dataset Collection](https://itrust.sutd.edu.sg/itrust-labs_datasets/) 💻
+
+> This dataset has to be [requested](https://docs.google.com/forms/d/e/1FAIpQLSdwOIR-LuFnSu5cIAzun5OQtWXcsOhmC7NtTbb-LBI1MyOcug/viewform) for access.
+
 This collection of datasets provided by the _Singapur University of Technology and Design_ and the _iTrust Centre for Research in Cyber Security_ contains 5 different datasets suitable for benchmarking anomaly detection algorithms derived from the two available main datasets SWat and WADI (see blow).<br/>
-[_All datasets have to explicitly be requested for use._ ](https://docs.google.com/forms/d/e/1FAIpQLSdwOIR-LuFnSu5cIAzun5OQtWXcsOhmC7NtTbb-LBI1MyOcug/viewform)
 
 #### [Secure Water Treatment](https://itrust.sutd.edu.sg/itrust-labs-home/itrust-labs_swat/) (SWaT) 🚰
 The Secure Water Treatment (SWaT) dataset is a collection of data from a water treatment testbed, covering 11 days of continuous operation—7 days under normal conditions and 4 days with deliberate attack scenarios.

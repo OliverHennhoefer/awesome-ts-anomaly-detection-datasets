@@ -1,7 +1,7 @@
 # Awesome Time-Series Anomaly Detection Datasets [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
 
-The most extensive collection of publicly available **time-series datasets for anomaly detection**
+Extensive collection of publicly available **time-series datasets for anomaly detection**
 with a focus on real-world data or synthetic data that is representative of real-world data.
 
 # 1 Datasets

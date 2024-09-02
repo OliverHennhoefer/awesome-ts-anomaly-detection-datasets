@@ -24,6 +24,12 @@ These competitions often involve tasks like anomaly detection, root cause analys
 
 Official Repository: [NetManAIOps](https://github.com/NetManAIOps/KPI-Anomaly-Detection/tree/master)
 
+### [HexagonML Competition](https://compete.hexagon-ml.com/practice/competition/39/#description)
+> [Login](https://compete.hexagon-ml.com/profile/login/?next=/practice/competition/39/%23data) is needed for access.
+> Data in the linked [repository](https://github.com/intellygenta/KDDCup2021) is publicly available.
+
+Repository: [KDDCup2021](https://github.com/intellygenta/KDDCup2021)
+
 ## 1.2 Multivariate
 
 ### [Tennessee Eastman Process Simulation](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/6C3JR1) (TEP) 🏭
@@ -112,22 +118,23 @@ It includes over 50 labeled time-series datasets from both real-world and synthe
 NAB provides tools for testing algorithms, a leaderboard for competitive results, and encourages contributions and collaboration from the community.
 The benchmark and its associated resources support the development and assessment of algorithms in unsupervised real-time anomaly detection.
 
-Official Repository: [Numenta](https://github.com/numenta/NAB)
-
 ### [Controlled Anomalies Time-Series](https://zenodo.org/records/8338435) (CATS) 💼
 The CATS dataset is a simulated dataset designed for benchmarking anomaly detection algorithms in multivariate time series.
 It includes 17 variables representing sensor readings, control commands, and external stimuli, with 200 precisely injected anomalies across 5 million timestamps.
 The dataset offers fine control over ground truth, context for anomalies, and a pure signal without noise, making it ideal for evaluating the performance, robustness, and explainability of anomaly detection methods in a complex dynamical system.
 
+# 3 Related Datasets
 
-# 3 Honorable Mentions
+### [NYC Taxi Traffic](https://www.kaggle.com/datasets/julienjta/nyc-taxi-traffic) 📍
+Numbers of New Yoek taxi passengers, with five anomalies occurring during the NYC marathon, Thanksgiving, Christmas, New Years day, and a snow storm.
+
+### [Metro Interstate Traffic Volume](https://archive.ics.uci.edu/dataset/492/metro+interstate+traffic+volume)
+Hourly Interstate 94 Westbound traffic volume for MN DoT ATR station 301, roughly midway between Minneapolis and St Paul, MN. Hourly weather features and holidays included for impacts on traffic volume.
+
+# 4 Data Hubs
 
 ### [PhysioNet Open Access Databases](https://physionet.org/about/database/) 📍
 The repository provides free access to a large collection of medical research data, supporting biomedical research and education through the availability of physiological and clinical data alongside related open-source software.
 
 ### [IEEE Dataport](https://ieee-dataport.org/) 📍
 Public hub for dataset sharing.
-
-
-### [NYC Taxi Traffic](https://www.kaggle.com/datasets/julienjta/nyc-taxi-traffic) 📍
-Numbers of New Yoek taxi passengers, with five anomalies occurring during the NYC marathon, Thanksgiving, Christmas, New Years day, and a snow storm.

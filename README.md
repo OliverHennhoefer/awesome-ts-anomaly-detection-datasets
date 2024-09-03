@@ -42,6 +42,15 @@ Official Repository: [NetManAIOps](https://github.com/NetManAIOps/KPI-Anomaly-De
 
 Repository: [KDDCup2021](https://github.com/intellygenta/KDDCup2021)
 
+### [The Mackey-Glass Anomaly Benchmark](https://zenodo.org/records/3760086) (MGAB)
+Datasets composed of synthetic Mackey-Glass time series with non-trivial anomalies.
+In contrast to other synthetic benchmarks, it is very hard for the human eye to distinguish the introduced anomalies from the normal (chaotic) behavior.
+
+Official Repository: [MGAB](https://github.com/MarkusThill/MGAB)
+Related Publications: [Time Series Encodings with Temporal Convolutional Networks](https://link.springer.com/chapter/10.1007/978-3-030-63710-1_13)
+
+_The provided code allows for generating an own version of the data with different parameter settings._
+
 ## 1.2 Multivariate
 
 ### [Wind Turbine (SCADA) Repository](https://github.com/sltzgs/Wind_Turbine_SCADA_open_data)
@@ -166,6 +175,9 @@ Hourly Interstate 94 Westbound traffic volume for MN DoT ATR station 301, roughl
 
 ### [EDP Open Data](https://www.edp.com/en/innovation/open-data/data) 🌐
 Platform providing open datasets in context of solar photovoltaic, wind and thermal technology.
+
+### [Evaluation Datasets](https://timeeval.github.io/evaluation-paper/notebooks/Datasets.html) 🌐
+Lists univariate and multivariate time series anomaly detection datasets used in the experimental evaluation paper.
 
 ### [PhysioNet Open Access Databases](https://physionet.org/about/database/) 🌐
 The repository provides free access to a large collection of medical research data, supporting biomedical research and education through the availability of physiological and clinical data alongside related open-source software.

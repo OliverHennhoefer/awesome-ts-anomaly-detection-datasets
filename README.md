@@ -8,15 +8,15 @@ with a focus on real-world data or synthetic data that is representative of real
 
 ## 1.1 Univariate
 
-### [Yahoo! S5](https://webscope.sandbox.yahoo.com/catalog.php?datatype=s&did=70) 💻
+### [Yahoo! S5](https://webscope.sandbox.yahoo.com/catalog.php?datatype=s&did=70)
 
 > This dataset has to be [requested](https://webscope.sandbox.yahoo.com/catalog.php?datatype=s&did=70) for access.
 
-This is designed to benchmark anomaly detection algorithms using time-series data with tagged anomalies, including outliers and change-points, representing various Yahoo services and synthetic variations.
+S5 is designed to benchmark anomaly detection algorithms using time-series data with tagged anomalies, including outliers and change-points, representing various Yahoo! services and synthetic variations.
 
-### [AIOps Competition](https://github.com/NetManAIOps/KPI-Anomaly-Detection/tree/master) 💻
-The Chinese AIOps Competition series challenges participants to develop innovative algorithms and solutions that can automatically detect and diagnose IT system issues using large-scale datasets.
-These competitions often involve tasks like anomaly detection, root cause analysis, and predictive maintenance.
+### [AIOps Competition](https://github.com/NetManAIOps/KPI-Anomaly-Detection/tree/master)
+The Chinese AIOps Competition series challenges participants to develop innovative solutions that can detect and diagnose IT system issues using large-scale datasets.
+The competitions involve tasks like anomaly detection, root cause analysis, and predictive maintenance.
 
 - [AIOps 2018](https://github.com/NetManAIOps/KPI-Anomaly-Detection) ([Announcement](https://competition.aiops-challenge.com/home/competition/1484452272200032281)),
 - [AIOps 2019](https://github.com/NetManAIOps/MultiDimension-Localization) ([Announcement](https://competition.aiops-challenge.com/home/competition/1484446614851493956)),
@@ -32,76 +32,90 @@ Repository: [KDDCup2021](https://github.com/intellygenta/KDDCup2021)
 
 ## 1.2 Multivariate
 
-### [Tennessee Eastman Process Simulation](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/6C3JR1) (TEP) 🏭
-The TEP is a benchmark dataset is designed for testing anomaly detection algorithms in industrial process control settings.
+### [Wind Turbine (SCADA) Repository](https://github.com/sltzgs/Wind_Turbine_SCADA_open_data)
+Repository with a total of eight SCADA datasets of various wind farms and additional links to related datasets.
+
+> Some listed sources need either a platform registration or an application.
+
+### [Tennessee Eastman Process Simulation](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/6C3JR1) (TEP)
+The TEP dataset is designed for anomaly detection in industrial process control settings.
 It simulates a complex chemical production process with multiple operating conditions and potential faults, providing time-series data that includes normal operations as well as various types of faults or anomalies.
-The dataset is widely used to evaluate the performance of anomaly detection methods in identifying and diagnosing these faults in a realistic industrial environment.
 
 _Detailed information available [here](https://keepfloyding.github.io/posts/Ten-East-Proc-Intro/). The Python package [PyTEP](https://github.com/ccreinartz11/pytep) allows for customized
-simulation scenarios and setups._
+simulation scenarios and setups. **The package requires an activated MATLAB/Simulink license.**_ 
 
-### [Server Machine Dataset](https://github.com/NetManAIOps/OmniAnomaly) (SMD) 💻
-The SMD is a benchmark dataset used for evaluating anomaly detection algorithms in the context of server operations.
-It consists of several time-series data collected from different server machines, capturing various metrics such as CPU load, memory usage and network traffic.
+### [Server Machine Dataset](https://github.com/NetManAIOps/OmniAnomaly) (SMD)
+The SMD is a dataset used for anomaly detection in the context of server operations.
+It consists of several time-series collected from different server machines, capturing various metrics such as CPU load, memory usage and network traffic.
 The dataset includes labeled anomalies, such as spikes or drops in performance.
 
 Introducing Publication: [Robust Anomaly Detection for Multivariate Time Series through Stochastic Recurrent Neural Network](https://dl.acm.org/doi/10.1145/3292500.3330672)
 
-### [IoT: Online AD for Drinking Water Quality](https://www.spotseven.de/gecco/gecco-challenge/gecco-challenge-2018/) 🚰
-The GECCO 2018 Industrial Challenge invites participants to develop an event detection system for predicting changes in a time series of drinking water composition data, utilizing a real-world dataset provided by Thüringer Fernwasserversorgung.
-This year’s challenge emphasizes the practical application of solutions, as the winning submissions may be implemented in real-world scenarios, and for the first time, participants can submit 2-page algorithm descriptions for potential publication in the GECCO Companion.
+### [IoT: Online AD for Drinking Water Quality](https://www.spotseven.de/gecco/gecco-challenge/gecco-challenge-2018/)
+The GECCO 2018 Industrial Challenge invites participants to develop an event detection system for predicting changes in a time series of drinking water composition data, utilizing a real-world dataset provided by _Thüringer Fernwasserversorgung_ (Germany).
 
-### [Application Server Dataset](https://github.com/zhhlee/InterFusion/tree/main) (ASD) 💻
+### [Application Server Dataset](https://github.com/zhhlee/InterFusion/tree/main) (ASD)
 The ASD dataset contains data of  12 application servers in a large Internet company.
 
 Corresponding Publication: [Multivariate Time Series Anomaly Detection and Interpretation using Hierarchical Inter-Metric and Temporal Embedding](https://dl.acm.org/doi/10.1145/3447548.3467075)
 
-### [Soil Moisture Active Passive](https://nsidc.org/data/smap/data) (SMAP) 📡 and [Mars Science Laboratory](https://pds-atmospheres.nmsu.edu/data_and_services/atmospheres_data/Mars/Mars.html) (MSL) 📡
+### [Soil Moisture Active Passive](https://nsidc.org/data/smap/data) (SMAP) and [Mars Science Laboratory](https://pds-atmospheres.nmsu.edu/data_and_services/atmospheres_data/Mars/Mars.html) (MSL)
 SMAP (Soil Moisture Active Passive satellite) and MSL (Mars Science Laboratory rover) are two public datasets from NASA.
 
 Related Repository: [Telemanom](https://github.com/khundman/telemanom) and [OmniAnomaly](https://github.com/NetManAIOps/OmniAnomaly)<br/>
 Related Publications: [Detecting Spacecraft Anomalies Using LSTMs and Nonparametric Dynamic Thresholding](https://dl.acm.org/doi/10.1145/3219819.3219845) and [Robust Anomaly Detection for Multivariate Time Series through Stochastic Recurrent Neural Network](https://dl.acm.org/doi/10.1145/3292500.3330672)<br/>
 Corresponding Download Versions: [OmniAnomaly](https://github.com/NetManAIOps/OmniAnomaly)
 
-### [SUTD & iTrust Dataset Collection](https://itrust.sutd.edu.sg/itrust-labs_datasets/) 💻
+### [SUTD & iTrust Dataset Collection](https://itrust.sutd.edu.sg/itrust-labs_datasets/)
 
 > This dataset has to be [requested](https://docs.google.com/forms/d/e/1FAIpQLSdwOIR-LuFnSu5cIAzun5OQtWXcsOhmC7NtTbb-LBI1MyOcug/viewform) for access.
 
 This collection of datasets provided by the _Singapur University of Technology and Design_ and the _iTrust Centre for Research in Cyber Security_ contains 5 different datasets suitable for benchmarking anomaly detection algorithms derived from the two available main datasets SWat and WADI (see blow).<br/>
 
-#### [Secure Water Treatment](https://itrust.sutd.edu.sg/itrust-labs-home/itrust-labs_swat/) (SWaT) 🚰
+#### [Secure Water Treatment](https://itrust.sutd.edu.sg/itrust-labs-home/itrust-labs_swat/) (SWaT)
 The Secure Water Treatment (SWaT) dataset is a collection of data from a water treatment testbed, covering 11 days of continuous operation—7 days under normal conditions and 4 days with deliberate attack scenarios.
 The dataset includes network traffic and readings from 51 sensors and actuators, with labels indicating normal and abnormal behaviors
 During the 4 days of attacks, 41 different attack scenarios were executed based on a cyber-physical system (CPS) attack model developed by the research team.
 
-#### [Water Distriubtion](https://itrust.sutd.edu.sg/itrust-labs-home/itrust-labs_wadi/) (WADI) 🚰
+#### [Water Distriubtion](https://itrust.sutd.edu.sg/itrust-labs-home/itrust-labs_wadi/) (WADI)
 The Water Distribution (WADI) dataset captures data from a water distribution testbed over 16 days of continuous operation—14 days under normal conditions and 2 days featuring deliberate attack scenarios.
 The dataset includes readings from 123 sensors and actuators, with the attack scenarios based on a cyber-physical system (CPS) attack model developed by the research team.
 During the 2 days of attacks, 15 distinct attack scenarios were executed.
 
-### [Airbus Helicopter Accelerometer](https://www.research-collection.ethz.ch/handle/20.500.11850/415151) 🚁
+### [Airbus Helicopter Accelerometer](https://www.research-collection.ethz.ch/handle/20.500.11850/415151)
 The Helicopter Vibration Measurement Dataset is provided by Airbus SAS to automate the validation of vibration data and detect abnormal sensor behavior. Vibration measurements are collected from accelerometers placed at various positions on helicopters, measuring in three directions: longitudinal, vertical, and lateral.
 
-### [Pooled Server Metric](https://github.com/eBay/RANSynCoders/tree/main/data) (PSM) 💻
-The multivariate PSM dataset comprises 90 key performance indices (KPIs) from eBay, capturing per-minute cart volumes across various subdimensions like user location, device type, and cart types, making it suitable for analyzing temporal and spatial dependencies that reflect business availability and health.
+### [Pooled Server Metric](https://github.com/eBay/RANSynCoders/tree/main/data) (PSM)
+The multivariate PSM dataset comprises 90 key performance indices (KPIs) from eBay, capturing per-minute cart volumes across various sub-dimensions like user location, device type, and cart types, making it suitable for analyzing temporal and spatial dependencies that reflect business availability and health.
 
 Related Publications: [Practical Approach to Asynchronous Multivariate Time Series Anomaly Detection and Localization](https://dl.acm.org/doi/10.1145/3447548.3467174) and  [Real-Time Synchronization in Neural Networks for Multivariate Time Series Anomaly Detection](https://ieeexplore.ieee.org/document/9413847)
 
-### [3W](https://github.com/petrobras/3W) (Petrobas) 🏭
-The3W Dataset consists of instances from three different sources containing undesirable events occurring in oil wells.
+### [3W](https://github.com/petrobras/3W) (Petrobas)
+The 3W dataset consists of instances from three different sources containing undesirable events occurring in oil wells.
 Accompanying this dataset is the 3W Toolkit, a software package designed to facilitate experimentation with the dataset for specific problems related to oil well operations.
 
 Related Publications: [A realistic and public dataset with rare undesirable real events in oil wells](https://www.sciencedirect.com/science/article/pii/S0920410519306357?via%3Dihub)
 
-### [(HIL-based Augmented ICS) Security](https://github.com/icsdataset/hai) (HAI) 🏭
+### [Drive End Bearing Faults](https://engineering.case.edu/bearingdatacenter/download-data-file)
+Data was collected for normal bearings, single-point drive end and fan end defects.
+
+### [Gearbox Faults](https://search-data.ubfc.fr/FR-13002091000019-2023-03-06_LASPI-Detection-and-diagnostics-of-gearbox.html) (LAPSI)
+Dataset of current, voltage, and vibration measurements of an electromechanical driving system.
+The system is a three-phase asynchronous motor that drives a gearbox.
+
+### [Rotor and Stator Faults in Rotating Machines](https://search-data.ubfc.fr/FR-13002091000019-2023-03-06-03_AMPERE-Detection-and-diagnostics-of-rotor-and.html) (AMPERE)
+Dataset of speed, current, voltage and vibration measurements of an electromechanical drive system.
+The system is a three-phase asynchronous motor.
+
+### [HIL-based Augmented ICS Security](https://github.com/icsdataset/hai) (HAI)
 The HAI dataset was collected from a realistic industrial control system (ICS) testbed augmented with a Hardware-In-the-Loop (HIL) simulator that emulates steam-turbine power generation and pumped-storage hydropower generation.
 
-### [Industrial Control System Cyber Attack Datasets](https://sites.google.com/a/uah.edu/tommy-morris-uah/ics-data-sets) 🏭
+### [Industrial Control System Cyber Attack Datasets](https://sites.google.com/a/uah.edu/tommy-morris-uah/ics-data-sets)
 A collection of three datasets regarding power systems, gas pipelines and water storage tanks.
 
-### [Localization Data for Person Activity](https://archive.ics.uci.edu/dataset/196/localization+data+for+person+activity) 🏃
+### [Localization Data for Person Activity](https://archive.ics.uci.edu/dataset/196/localization+data+for+person+activity)
 Data contains recordings of five people performing different activities.
-Each person wore four sensors (tags) while performing the same scenario five times.
+Each person wore four sensors while performing the same scenario five times.
 
 Refactored Version: [Kaggle](https://www.kaggle.com/datasets/jorekai/anomaly-detection-falling-people-events)
 
@@ -125,16 +139,19 @@ The dataset offers fine control over ground truth, context for anomalies, and a 
 
 # 3 Related Datasets
 
-### [NYC Taxi Traffic](https://www.kaggle.com/datasets/julienjta/nyc-taxi-traffic) 📍
+### [NYC Taxi Traffic](https://www.kaggle.com/datasets/julienjta/nyc-taxi-traffic) 🖇️
 Numbers of New Yoek taxi passengers, with five anomalies occurring during the NYC marathon, Thanksgiving, Christmas, New Years day, and a snow storm.
 
-### [Metro Interstate Traffic Volume](https://archive.ics.uci.edu/dataset/492/metro+interstate+traffic+volume)
+### [Metro Interstate Traffic Volume](https://archive.ics.uci.edu/dataset/492/metro+interstate+traffic+volume) 🖇️
 Hourly Interstate 94 Westbound traffic volume for MN DoT ATR station 301, roughly midway between Minneapolis and St Paul, MN. Hourly weather features and holidays included for impacts on traffic volume.
 
 # 4 Data Hubs
 
-### [PhysioNet Open Access Databases](https://physionet.org/about/database/) 📍
+### [EDP Open Data](https://www.edp.com/en/innovation/open-data/data) 🌐
+Platform providing open datasets in context of solar photovoltaic, wind and thermal technology.
+
+### [PhysioNet Open Access Databases](https://physionet.org/about/database/) 🌐
 The repository provides free access to a large collection of medical research data, supporting biomedical research and education through the availability of physiological and clinical data alongside related open-source software.
 
-### [IEEE Dataport](https://ieee-dataport.org/) 📍
-Public hub for dataset sharing.
+### [IEEE Dataport](https://ieee-dataport.org/) 🌐
+Public hub for dataset sharing in context of IEEE publications.

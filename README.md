@@ -58,6 +58,11 @@ Repository with a total of eight SCADA datasets of various wind farms and additi
 
 > Some listed sources need either a platform registration or an application.
 
+### [Wind Turbine (SCADA) For Early Fault Detection](https://zenodo.org/records/10958775)
+Real-world SCADA data from three wind farms.
+
+Corresponding Publication: [CARE to Compare: A real-world dataset for anomaly detection in wind turbine data](https://arxiv.org/abs/2404.10320)
+
 ### [Tennessee Eastman Process Simulation](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/6C3JR1) (TEP)
 The TEP dataset is designed for anomaly detection in industrial process control settings.
 It simulates a complex chemical production process with multiple operating conditions and potential faults, providing time-series data that includes normal operations as well as various types of faults or anomalies.
@@ -184,3 +189,6 @@ The repository provides free access to a large collection of medical research da
 
 ### [IEEE Dataport](https://ieee-dataport.org/) 🌐
 Public hub for dataset sharing in context of IEEE publications.
+
+### [Zenodo](https://zenodo.org/search?q=anomaly%20detection%20time%20series&f=resource_type%3Adataset&f=access_status%3Aopen&f=file_type%3Acsv&f=file_type%3Atxt&f=file_type%3Azip&f=file_type%3Ahdf5&f=file_type%3Axlsx&l=list&p=1&s=10&sort=bestmatch) 🌐
+Open Science platform for dataset sharing and more.

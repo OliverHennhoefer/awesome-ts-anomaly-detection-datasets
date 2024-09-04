@@ -7,13 +7,15 @@ with a focus on real-world data or synthetic data that is representative of real
 **Before using any of the listed datasets for your experiments you may want to read:**
 - [Current Time Series Anomaly Detection Benchmarks are Flawed and are Creating the Illusion of Progress](https://arxiv.org/abs/2009.13807)
 
+_(At least skim through the presentation "[Irrational Exuberance: Why we should not believe 95% of Papers on Time-Series Anomaly Detection](https://kdd-milets.github.io/milets2021/slides/Irrational%20Exuberance_Eammon_Keogh.pdf)" for a tl;dr.)_
+
 Many of the popular datasets for benchmarking in anomaly detection suffer from:
 - **Triviality**
 - **Unrealistic Anomaly Density**
 - **Mislabeled Ground Truth**
 - (Run-to-Failure Bias)
 
-_Among those are e.g. Yahoo! S5 (ironically listed first here) and Numenta, among others.
+_Among those are e.g. Yahoo! S5 (ironically listed first here) and the Numenta Benchmark (NAB).
 Do not rely [only] on these kinds of datasets for evaluation and experimentation!_
 
 # 1 Datasets
@@ -147,10 +149,10 @@ Refactored Version: [Kaggle](https://www.kaggle.com/datasets/jorekai/anomaly-det
 
 # 2 Benchmark Collections
 
-### [UCR Time Series Anomaly Archive](https://www.cs.ucr.edu/%7Eeamonn/time_series_data_2018/) 💼
+### [UCR Time Series Anomaly Archive (Download Link)](https://www.cs.ucr.edu/~eamonn/time_series_data_2018/UCR_TimeSeriesAnomalyDatasets2021.zip) 💼
 Archive of time-series data for anomaly detection that compensate shortcomings of other available datasets for anomaly detection as stated in the corresponding publication(s).
 
-Corresponding Publication: [The UCR Time Series Archive](https://arxiv.org/pdf/1810.07758) and [Current Time Series Anomaly Detection Benchmarks are Flawed and are Creating the Illusion of Progress](https://arxiv.org/abs/2009.13807)
+Corresponding Publication: [Current Time Series Anomaly Detection Benchmarks are Flawed and are Creating the Illusion of Progress](https://arxiv.org/abs/2009.13807)
 
 ### [Skoltech Anomaly Benchmark](https://github.com/waico/SKAB) (SKAB) 💼
 The SKAB is a comprehensive framework designed for evaluating anomaly detection algorithms, focusing on outlier and changepoint detection in multivariate time series data.

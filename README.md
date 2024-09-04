@@ -147,6 +147,11 @@ Each person wore four sensors while performing the same scenario five times.
 
 Refactored Version: [Kaggle](https://www.kaggle.com/datasets/jorekai/anomaly-detection-falling-people-events)
 
+### [EDEN ISS 2020 Telemetry Dataset](https://zenodo.org/records/11485183)
+The EDEN ISS 2020 Telemetry Dataset consists of equidistant sensor readings stemming from 97 sensors in the [EDEN ISS](https://eden-iss.net/) research greenhouse.
+
+Related Publications: [Unraveling Anomalies in Time: Unsupervised Discovery and Isolation of Anomalous Behavior in Bio-regenerative Life Support System Telemetry](https://arxiv.org/pdf/2406.09825v1)
+
 # 2 Benchmark Collections
 
 ### [UCR Time Series Anomaly Archive (Download Link)](https://www.cs.ucr.edu/~eamonn/time_series_data_2018/UCR_TimeSeriesAnomalyDatasets2021.zip) 💼

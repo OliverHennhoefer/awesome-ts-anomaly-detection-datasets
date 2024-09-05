@@ -199,3 +199,22 @@ Public hub for dataset sharing in context of IEEE publications.
 
 ### [Zenodo](https://zenodo.org/search?q=anomaly%20detection%20time%20series&f=resource_type%3Adataset&f=access_status%3Aopen&f=file_type%3Acsv&f=file_type%3Atxt&f=file_type%3Azip&f=file_type%3Ahdf5&f=file_type%3Axlsx&l=list&p=1&s=10&sort=bestmatch) 🌐
 Open Science platform for dataset sharing and more.
+
+***
+
+# Inspiration 💡
+
+Now, what to do with all these datasets? Here are some methods **highly competitive** methods (_you probably never heard of_) for inspiration:
+
+##### [Time-Series Discords](https://matrixprofile.org/posts/what-are-time-series-discords/)
+Anomaly detection based on _time-series discords_ is a 20-year-old and widely unknown technique, outperforming a wide range of contemporary anomaly detection methods.
+The method is able to find the most _subtle_ anomalies in time-series, as this method is said to yield _superhuman_ result.
+
+- [HOT SAX: Finding the Most Unusual Time Series Subsequence: Algorithms and Applications ](https://www.cs.ucr.edu/~eamonn/HOT%20SAX%20%20long-ver.pdf) (2004)
+  - Original paper
+  - [Disk Aware Discord Discovery: Finding Unusual Time-series in Terabyte-sized Datasets](https://www.cs.ucr.edu/~eamonn/DiskawareDiscords_Journal.pdf) (2008)
+  - [Matrix Profile XIII: Time Series Snippets: A New Primitive for Time Series Data Mining](https://ieeexplore.ieee.org/document/8588817) (2018)
+  - [Matrix Profile XXIV: Scaling Time Series Anomaly Detection to Trillions of Datapoints and Ultra-fast Arriving Data Streams](https://www.cs.ucr.edu/~eamonn/DAMP_long_version.pdf) (DAMP; 2022)
+      - Scalable version able to operate in an _online-manner_ (see also the [paper version]((https://link.springer.com/article/10.1007/s10618-022-00911-7)) and [online documentation](https://sites.google.com/view/discord-aware-matrix-profile/home))
+- [Parameter-Free Discovery of Arbitrary Length Anomalies in Massive Time Series Archives](https://ieeexplore.ieee.org/document/9338376) (2020)
+  - [MERLIN++](https://dl.acm.org/doi/10.1007/s10618-022-00876-7) (MERLIN; 2023)

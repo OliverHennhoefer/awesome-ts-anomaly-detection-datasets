@@ -183,6 +183,9 @@ Numbers of New Yoek taxi passengers, with five anomalies occurring during the NY
 ### [Metro Interstate Traffic Volume](https://archive.ics.uci.edu/dataset/492/metro+interstate+traffic+volume) 🖇️
 Hourly Interstate 94 Westbound traffic volume for MN DoT ATR station 301, roughly midway between Minneapolis and St Paul, MN. Hourly weather features and holidays included for impacts on traffic volume.
 
+### [Credit Card Frau Detection](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud) 🖇️
+Although not particularly a time-series dataset in the classical sense, the dataset shows transactions and their properties in chronological order. 
+
 # 4 Data Hubs
 
 ### [EDP Open Data](https://www.edp.com/en/innovation/open-data/data) 🌐

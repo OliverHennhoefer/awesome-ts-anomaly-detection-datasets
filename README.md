@@ -55,6 +55,9 @@ _The provided code allows for generating an own version of the data with differe
 
 ## 1.2 Multivariate
 
+### [SMTP](https://odds.cs.stonybrook.edu/smtp-kddcup99-dataset/)
+Modified subset of the KDDCUP99 dataset containing 976,157 records with 0.35% of it labeled as attacks.
+
 ### [Wind Turbine (SCADA) Repository](https://github.com/sltzgs/Wind_Turbine_SCADA_open_data)
 Repository with a total of eight SCADA datasets of various wind farms and additional links to related datasets.
 

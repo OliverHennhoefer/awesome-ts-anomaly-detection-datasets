@@ -162,8 +162,10 @@ Archive of time-series data for anomaly detection that compensate shortcomings o
 
 Corresponding Publication: [Current Time Series Anomaly Detection Benchmarks are Flawed and are Creating the Illusion of Progress](https://arxiv.org/abs/2009.13807)
 
-### [Time-Series Benchmarking Suite for Univariate Anomaly Detection](https://github.com/TheDatumOrg/TSB-UAD) (TSB-UAD)
+### [Time-Series Benchmarking Suite for Univariate Anomaly Detection](https://github.com/TheDatumOrg/TSB-UAD) (TSB-UAD) 💼
 TSB-UAD is a new open, end-to-end benchmark suite to ease the evaluation of univariate time-series anomaly detection methods. Overall, TSB-UAD contains 12686 time series with labeled anomalies spanning different domains with high variability of anomaly types, ratios, and sizes.
+
+Related Repository: [Towards A Reliable Time-Series Anomaly Detection Benchmark](https://github.com/TheDatumOrg/TSB-AD) (TSB-AD) 💼
 
 ### [Skoltech Anomaly Benchmark](https://github.com/waico/SKAB) (SKAB) 💼
 The SKAB is a comprehensive framework designed for evaluating anomaly detection algorithms, focusing on outlier and changepoint detection in multivariate time series data.

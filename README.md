@@ -99,6 +99,9 @@ Corresponding Download Versions: [OmniAnomaly](https://github.com/NetManAIOps/Om
 
 ### [SUTD & iTrust Dataset Collection](https://itrust.sutd.edu.sg/itrust-labs_datasets/)
 
+### [Unknown Kaggle Dataset: Rate Anomalies](https://www.kaggle.com/datasets/drscarlat/time-series)
+Unknown dataset with 509k instances with 11 features and an anomaly density of just 0.09% making it an interesting candidate as realistic benchmarking dataset.
+
 > This dataset has to be [requested](https://docs.google.com/forms/d/e/1FAIpQLSdwOIR-LuFnSu5cIAzun5OQtWXcsOhmC7NtTbb-LBI1MyOcug/viewform) for access.
 
 This collection of datasets provided by the _Singapur University of Technology and Design_ and the _iTrust Centre for Research in Cyber Security_ contains 5 different datasets suitable for benchmarking anomaly detection algorithms derived from the two available main datasets SWat and WADI (see blow).<br/>

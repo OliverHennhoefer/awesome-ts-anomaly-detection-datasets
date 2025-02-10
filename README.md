@@ -1,22 +1,6 @@
-# Awesome Time-Series Anomaly Detection Datasets [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
+# Awesome Time-Series Anomaly Detection Resources [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
-
-Extensive collection of publicly available **time-series datasets for anomaly detection**
-with a focus on real-world data or synthetic data that is representative of real-world data.
-
-**Before using any of the listed datasets for your experiments you may want to read:**
-- [Current Time Series Anomaly Detection Benchmarks are Flawed and are Creating the Illusion of Progress](https://arxiv.org/abs/2009.13807)
-
-_(At least skim through the presentation "[Irrational Exuberance: Why we should not believe 95% of Papers on Time-Series Anomaly Detection](https://kdd-milets.github.io/milets2021/slides/Irrational%20Exuberance_Eammon_Keogh.pdf)" for a tl;dr.)_
-
-Many of the popular datasets for benchmarking in anomaly detection suffer from:
-- **Triviality**
-- **Unrealistic Anomaly Density**
-- **Mislabeled Ground Truth**
-- (Run-to-Failure Bias)
-
-_Among those are e.g. Yahoo! S5 (ironically listed first here) and the Numenta Benchmark (NAB).
-Do not rely [only] on these kinds of datasets for evaluation and experimentation!_
+---
 
 # 1 Datasets
 

@@ -172,6 +172,9 @@ Hourly Interstate 94 Westbound traffic volume for MN DoT ATR station 301, roughl
 ### [Credit Card Frau Detection](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud) 🖇️
 Although not particularly a time-series dataset in the classical sense, the dataset shows transactions and their properties in chronological order. 
 
+### [PaySim 2.0](https://github.com/BBQtime/Synthetic-Financial-Datasets-For-Fraud-Detection)
+Closely related to the credit card fraud dataset. See [here](https://www.kaggle.com/datasets/ealaxi/paysim1) for PaySim 1.0 on Kaggle.
+
 # Data Hubs
 
 ## [EDP Open Data](https://www.edp.com/en/innovation/open-data/data) 🌐

@@ -69,6 +69,30 @@ A modified subset of KDD Cup 1999 network traffic records used for outlier and a
 - Access: open ODDS download page.
 - Notes: tabular/network dataset with temporal-adjacent usage in anomaly-detection benchmarks; validate suitability for sequence models before use.
 
+### [Kitsune Network Attack](https://archive.ics.uci.edu/dataset/516/kitsune+network+attack)
+
+Chronologically ordered network-packet feature streams from IoT and surveillance-system attacks, with benign/malicious labels.
+
+- Access: public UCI Machine Learning Repository dataset.
+- Domain: online intrusion detection, IoT network monitoring, and sequential attack detection.
+- Publication: [Kitsune: An Ensemble of Autoencoders for Online Network Intrusion Detection](https://arxiv.org/abs/1802.09089).
+
+### [N-BaIoT](https://archive.ics.uci.edu/dataset/442/detection+of+iot+botnet+attacks+n+baiot)
+
+Sequential network-traffic feature data from nine commercial IoT devices infected by Mirai and BASHLITE botnets.
+
+- Access: public UCI Machine Learning Repository dataset.
+- Domain: IoT intrusion detection and anomaly-based botnet detection.
+- Publication: [N-BaIoT: Network-Based Detection of IoT Botnet Attacks Using Deep Autoencoders](https://ieeexplore.ieee.org/document/8399342).
+
+### [CESNET-TimeSeries24](https://zenodo.org/records/13382427)
+
+Large-scale ISP traffic time series derived from the CESNET3 network for network-traffic forecasting and anomaly detection.
+
+- Access: open Zenodo record; helper tooling is available through [CESNET/cesnet-tszoo](https://github.com/CESNET/cesnet-tszoo).
+- Scope: 40 weeks of traffic aggregates over IP, institutional, and subnet levels.
+- Publication: [CESNET-TimeSeries24: Time Series Dataset for Network Traffic Anomaly Detection and Forecasting](https://www.nature.com/articles/s41597-025-04603-x).
+
 ### [Wind Turbine SCADA Open Data](https://github.com/sltzgs/Wind_Turbine_SCADA_open_data)
 
 Curated repository linking multiple open wind-turbine SCADA datasets from different wind farms.
@@ -98,11 +122,11 @@ Server-machine telemetry used for multivariate anomaly detection in operations m
 - Access: public through the OmniAnomaly repository.
 - Publication: [Robust Anomaly Detection for Multivariate Time Series through Stochastic Recurrent Neural Network](https://dl.acm.org/doi/10.1145/3292500.3330672).
 
-### [GECCO 2018 Drinking Water Quality](https://zenodo.org/records/3884398)
+### [GECCO Drinking Water Quality Challenges](https://zenodo.org/records/3884398)
 
-Water-quality sensor data from the GECCO 2018 Industrial Challenge on online anomaly detection for drinking-water monitoring.
+Water-quality sensor data from the GECCO Industrial Challenges on online anomaly and event detection for drinking-water monitoring.
 
-- Access: open Zenodo record; original challenge page: [GECCO 2018](https://www.spotseven.de/gecco/gecco-challenge/gecco-challenge-2018/).
+- Access: open Zenodo records for [GECCO 2018](https://zenodo.org/records/3884398) and [GECCO 2019](https://zenodo.org/records/4304080); original challenge page: [GECCO 2018](https://www.spotseven.de/gecco/gecco-challenge/gecco-challenge-2018/).
 - Domain: environmental IoT and water-quality event detection.
 
 ### [Application Server Dataset](https://github.com/zhhlee/InterFusion/tree/main) (ASD)
@@ -147,6 +171,38 @@ A University of Alabama in Huntsville collection covering cyber attacks and faul
 - Access: public dataset page.
 - Domains: power systems, gas pipelines, water storage tanks, and energy-management systems.
 
+### [BATADAL](https://www.batadal.net/index.html)
+
+Challenge datasets with SCADA measurements from the C-Town water distribution network under normal operation and cyber-attack scenarios.
+
+- Access: public challenge website.
+- Domain: water-distribution cyber-physical attack detection.
+- Publication: [Battle of the Attack Detection Algorithms: Disclosing Cyber Attacks on Water Distribution Networks](https://riunet.upv.es/handle/10251/144105).
+
+### [WDSEventDB](https://zenodo.org/records/17547955)
+
+Real-time water-distribution testbed data with cyberattack, leakage, and sensor-failure events for event diagnosis and anomaly detection.
+
+- Access: open Zenodo record.
+- Domain: smart water systems, operational failures, and cyber-physical event diagnosis.
+- Related work: Hardware-in-the-loop investigations of multimodal cybersecurity and operational failure detection in smart water systems.
+
+### [Hourly Anomaly Scores and Leak Labels for Urban Water Distribution](https://zenodo.org/records/15096167)
+
+Hourly multi-source water-distribution data from a Slovak utility, with SCADA, energy, and environmental anomaly scores mapped to confirmed leak labels.
+
+- Access: open Zenodo record.
+- Domain: urban water-network leak detection, fault prediction, and early-warning systems.
+- Publication: [A multisource dataset for anomaly detection and fault prediction in urban water distribution networks](https://www.nature.com/articles/s41597-026-07203-5).
+
+### [Leak Simulations in Experimental Water Distribution Systems](https://data.mendeley.com/datasets/tbrnp6vrnj/1)
+
+Labeled leak and no-leak sensor signals from a laboratory-scale water distribution testbed.
+
+- Access: open Mendeley Data record.
+- Signals: accelerometer, hydrophone, and dynamic-pressure measurements under multiple leak types, network topologies, and background conditions.
+- Publication: [Benchmarking dataset for leak detection and localization in water distribution systems](https://www.sciencedirect.com/science/article/pii/S2352340923002676).
+
 ### [Rate Anomalies](https://www.kaggle.com/datasets/drscarlat/time-series)
 
 Kaggle dataset with roughly 509k rows, 11 features, and a very low anomaly density.
@@ -161,6 +217,14 @@ Helicopter vibration measurements from accelerometers placed at multiple positio
 - Access: ETH Research Collection record.
 - Domain: aerospace vibration validation and abnormal sensor behavior detection.
 
+### [Real Electronic Signal Data from Particle Accelerator Power Systems](https://data.mendeley.com/datasets/kbbrw99vh8/5)
+
+Waveform time series from High Voltage Converter Modulators at the Spallation Neutron Source, labeled as normal or faulty.
+
+- Access: open Mendeley Data record.
+- Domain: particle accelerator power electronics, early fault detection, and signal-based anomaly detection.
+- Publication: [Real electronic signal data from particle accelerator power systems for machine learning anomaly detection](https://pmc.ncbi.nlm.nih.gov/articles/PMC9309398/).
+
 ### [Pooled Server Metrics](https://github.com/eBay/RANSynCoders/tree/main/data) (PSM)
 
 Multivariate eBay KPI data with per-minute cart-volume metrics across business and user subdimensions.
@@ -174,6 +238,29 @@ Oil-well time-series instances containing rare undesirable events, released with
 
 - Access: public GitHub repository.
 - Publication: [A realistic and public dataset with rare undesirable real events in oil wells](https://www.sciencedirect.com/science/article/pii/S0920410519306357).
+
+### [NoBOOM](https://www.kaggle.com/datasets/faebs94/noboom-anomaly-detection-in-chemical-processes)
+
+Chemical-process time-series anomaly-detection collection with industrial, pilot-scale, and laboratory-scale process data.
+
+- Access: public Kaggle dataset; code repository: [wagner-d/noboom](https://github.com/wagner-d/noboom).
+- Domain: chemical process monitoring and industrial fault detection.
+- Publication: [NoBOOM: Chemical Process Datasets for Industrial Anomaly Detection](https://openreview.net/forum?id=qiLboR0ocm).
+
+### [Packaging Industry Anomaly Detection](https://zenodo.org/records/7071747) (PIADE)
+
+Industrial packaging-machine production intervals, machine states, alarms, throughput, and one-hour aggregate sequences.
+
+- Access: open Zenodo record.
+- Domain: packaging machinery, alarm forecasting, throughput monitoring, and industrial anomaly detection.
+
+### [MetroPT-3](https://archive.ics.uci.edu/dataset/791/metropt+3+dataset)
+
+Air-compressor sensor data from the Porto metro system for online anomaly detection and failure prediction in railway maintenance.
+
+- Access: public UCI Machine Learning Repository dataset; archival record: [Zenodo](https://zenodo.org/records/6854240).
+- Domain: predictive maintenance, air-production units, and metro operations.
+- Publication: [The MetroPT dataset for predictive maintenance](https://www.nature.com/articles/s41597-022-01877-3).
 
 ### [Case Western Reserve University Bearing Data](https://engineering.case.edu/bearingdatacenter/download-data-file) (CWRU)
 
@@ -269,6 +356,14 @@ Simulated multivariate benchmark with controlled anomaly injection and detailed 
 - Access: open Zenodo record.
 - Scope: 17 variables, 5 million timestamps, and 200 injected anomalies.
 
+### [GutenTAG](https://github.com/TimeEval/GutenTAG)
+
+Synthetic time-series anomaly generator and dataset collection integrated with TimeEval.
+
+- Access: public GitHub repository and Python package.
+- Scope: configurable univariate and multivariate time series with multiple anomaly kinds.
+- Publication: [TimeEval: A Benchmarking Toolkit for Time Series Anomaly Detection Algorithms](https://vldb.org/pvldb/vol15/p3678-schmidl.pdf).
+
 ### [TimeEval Dataset Collection](https://timeeval.github.io/evaluation-paper/notebooks/Datasets.html)
 
 Dataset overview behind the TimeEval evaluation work, covering many univariate and multivariate anomaly-detection datasets.
@@ -347,6 +442,18 @@ Open-science search for time-series anomaly-detection datasets across CSV, TXT, 
 ### [Hugging Face Datasets](https://huggingface.co/datasets?sort=trending&search=time+series+anomaly)
 
 Community dataset hub with an increasing number of time-series and anomaly-detection dataset mirrors.
+
+### [NASA Prognostics Center of Excellence Data Repository](https://www.nasa.gov/intelligent-systems-division/discovery-and-systems-health/pcoe/pcoe-data-set-repository/)
+
+NASA repository for prognostics and systems-health datasets, including battery, bearing, milling, and C-MAPSS turbofan degradation time series.
+
+### [PHM Society Data Repository](https://data.phmsociety.org/)
+
+Prognostics and Health Management Society repository for data challenges and condition-monitoring datasets.
+
+### [ADRepository](https://github.com/mala-lab/ADBenchmarks-anomaly-detection-datasets)
+
+Research dataset repository for anomaly detection across modalities, including a dedicated time-series section.
 
 ## Contributing
 

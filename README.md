@@ -1,193 +1,355 @@
-# Awesome Time-Series Anomaly Detection Resources [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
+# Awesome Time-Series Anomaly Detection Datasets [![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
----
+A curated list of public and research-accessible datasets for time-series anomaly detection, event detection, fault detection, and closely related benchmarking tasks.
 
-# Univariate
+The focus is on datasets with temporal structure and a plausible anomaly-detection use case. Some datasets are directly labeled for anomalies, while others are commonly used through benchmark preprocessing, rare-event labels, domain events, or fault classes.
 
-## [Yahoo! S5](https://webscope.sandbox.yahoo.com/catalog.php?datatype=s&did=70)
+## Contents
 
-> This dataset has to be [requested](https://webscope.sandbox.yahoo.com/catalog.php?datatype=s&did=70) for access.
+- [Selection Notes](#selection-notes)
+- [Univariate Datasets](#univariate-datasets)
+- [Multivariate Datasets](#multivariate-datasets)
+- [Benchmark Collections](#benchmark-collections)
+- [Related Datasets](#related-datasets)
+- [Data Hubs and Catalogs](#data-hubs-and-catalogs)
+- [Contributing](#contributing)
 
-## [AIOps Competition](https://github.com/NetManAIOps/KPI-Anomaly-Detection/tree/master)
-The Chinese AIOps Competition series challenges participants to develop innovative solutions that can detect and diagnose IT system issues using large-scale datasets.
+## Selection Notes
 
-- [AIOps 2018](https://github.com/NetManAIOps/KPI-Anomaly-Detection) ([Announcement](https://competition.aiops-challenge.com/home/competition/1484452272200032281)),
-- [AIOps 2019](https://github.com/NetManAIOps/MultiDimension-Localization) ([Announcement](https://competition.aiops-challenge.com/home/competition/1484446614851493956)),
-- [AIOps 2020](https://github.com/NetManAIOps/AIOps-Challenge-2020-Data) ([Announcement](https://competition.aiops-challenge.com/home/competition/1484441527290765368))
+- Prefer official dataset pages, archival records, or maintained repositories over reuploads.
+- Keep access requirements visible: open download, request form, login, or license restrictions.
+- Include datasets that are useful for benchmarking, even if the original task is fault detection, event detection, operations monitoring, or rare-event classification.
+- Avoid treating benchmark scores as directly comparable unless preprocessing, label policy, point adjustment, and metrics are aligned.
 
-Official Repository: [NetManAIOps](https://github.com/NetManAIOps/KPI-Anomaly-Detection/tree/master)
+## Univariate Datasets
 
-## [HexagonML Competition](https://compete.hexagon-ml.com/practice/competition/39/#description)
-> [Login](https://compete.hexagon-ml.com/profile/login/?next=/practice/competition/39/%23data) is needed for access.
-> Data in the linked [repository](https://github.com/intellygenta/KDDCup2021) is publicly available.
+### [Yahoo! S5](https://webscope.sandbox.yahoo.com/catalog.php?datatype=s&did=70)
 
-Repository: [KDDCup2021](https://github.com/intellygenta/KDDCup2021)
+Synthetic and real Yahoo service time series released through Yahoo Webscope for anomaly-detection research.
 
-## [The Mackey-Glass Anomaly Benchmark](https://zenodo.org/records/3760086) (MGAB)
-Datasets composed of synthetic Mackey-Glass time series with non-trivial anomalies.
+- Access: request required through Yahoo Webscope.
+- Notes: often used as a classic univariate anomaly-detection benchmark; check the Webscope terms before redistribution.
 
-Official Repository: [MGAB](https://github.com/MarkusThill/MGAB)
-Related Publications: [Time Series Encodings with Temporal Convolutional Networks](https://link.springer.com/chapter/10.1007/978-3-030-63710-1_13)
+### [AIOps KPI Anomaly Detection](https://github.com/NetManAIOps/KPI-Anomaly-Detection)
 
-# Multivariate
+KPI time series from the AIOps Challenge series for detecting anomalies in large-scale IT operations metrics.
 
-## [SMTP](https://odds.cs.stonybrook.edu/smtp-kddcup99-dataset/)
-A modified subset of the KDDCUP99 dataset containing 976,157 records with 0.35% of it labeled as attacks.
+- Access: public GitHub repositories.
+- Included editions: [AIOps 2018](https://github.com/NetManAIOps/KPI-Anomaly-Detection), [AIOps 2019](https://github.com/NetManAIOps/MultiDimension-Localization), [AIOps 2020](https://github.com/NetManAIOps/AIOps-Challenge-2020-Data).
+- Related pages: [2018 announcement](https://competition.aiops-challenge.com/home/competition/1484452272200032281), [2019 announcement](https://competition.aiops-challenge.com/home/competition/1484446614851493956), [2020 announcement](https://competition.aiops-challenge.com/home/competition/1484441527290765368).
 
-## [Wind Turbine (SCADA) Repository](https://github.com/sltzgs/Wind_Turbine_SCADA_open_data)
-Repository with a total of eight SCADA datasets of various wind farms and additional links to related datasets.
+### [HexagonML / KDDCup2021 Practice Dataset](https://compete.hexagon-ml.com/practice/competition/39/#description)
 
-> Some listed sources need either a platform registration or an application.
+Competition-style time-series anomaly-detection data associated with the KDDCup2021 practice material.
 
-## [Wind Turbine (SCADA) For Early Fault Detection](https://zenodo.org/records/10958775)
-Real-world SCADA data from three wind farms.
+- Access: HexagonML login required for the competition page.
+- Public mirror: [intellygenta/KDDCup2021](https://github.com/intellygenta/KDDCup2021).
 
-Corresponding Publication: [CARE to Compare: A real-world dataset for anomaly detection in wind turbine data](https://arxiv.org/abs/2404.10320)
+### [Mackey-Glass Anomaly Benchmark](https://zenodo.org/records/3760086) (MGAB)
 
-## [Tennessee Eastman Process Simulation](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/6C3JR1) (TEP)
-The TEP dataset is designed for anomaly detection in industrial process control settings.
+Synthetic Mackey-Glass time series with deliberately injected, non-trivial anomalies.
 
-_Detailed information available [here](https://keepfloyding.github.io/posts/Ten-East-Proc-Intro/). The Python package [PyTEP](https://github.com/ccreinartz11/pytep) allows for customized
-simulation scenarios and setups. **The package requires an activated MATLAB/Simulink license.**_ 
+- Access: open Zenodo record.
+- Repository: [MarkusThill/MGAB](https://github.com/MarkusThill/MGAB).
+- Publication: [Time Series Encodings with Temporal Convolutional Networks](https://link.springer.com/chapter/10.1007/978-3-030-63710-1_13).
 
-## [Server Machine Dataset](https://github.com/NetManAIOps/OmniAnomaly) (SMD)
-The SMD is a dataset used for anomaly detection in the context of server operations.
+### [Microsoft Cloud Monitoring Dataset](https://github.com/microsoft/cloud-monitoring-dataset)
 
-Introducing Publication: [Robust Anomaly Detection for Multivariate Time Series through Stochastic Recurrent Neural Network](https://dl.acm.org/doi/10.1145/3292500.3330672)
+Real service and client telemetry time series from Microsoft cloud monitoring scenarios, with expert-labeled anomaly points.
 
-## [IoT: Online AD for Drinking Water Quality](https://www.spotseven.de/gecco/gecco-challenge/gecco-challenge-2018/)
-The GECCO 2018 Industrial Challenge invites participants to develop an event detection system for predicting changes in a time series of drinking water composition data, utilizing a real-world dataset provided by _Thüringer Fernwasserversorgung_ (Germany).
+- Access: public GitHub repository.
+- Domain: production cloud telemetry, service rates, latencies, crash rates, and related operational metrics.
 
-## [Application Server Dataset](https://github.com/zhhlee/InterFusion/tree/main) (ASD)
-The ASD dataset contains data from 12 application servers in a large Internet company.
+## Multivariate Datasets
 
-Corresponding Publication: [Multivariate Time Series Anomaly Detection and Interpretation using Hierarchical Inter-Metric and Temporal Embedding](https://dl.acm.org/doi/10.1145/3447548.3467075)
+### [SMTP](https://odds.cs.stonybrook.edu/smtp-kddcup99-dataset/)
 
-## [Soil Moisture Active Passive](https://nsidc.org/data/smap/data) (SMAP) and [Mars Science Laboratory](https://pds-atmospheres.nmsu.edu/data_and_services/atmospheres_data/Mars/Mars.html) (MSL)
-SMAP (Soil Moisture Active Passive satellite) and MSL (Mars Science Laboratory rover) are two public datasets from NASA.
+A modified subset of KDD Cup 1999 network traffic records used for outlier and attack detection.
 
-Related Repository: [Telemanom](https://github.com/khundman/telemanom) and [OmniAnomaly](https://github.com/NetManAIOps/OmniAnomaly)<br/>
-Related Publications: [Detecting Spacecraft Anomalies Using LSTMs and Nonparametric Dynamic Thresholding](https://dl.acm.org/doi/10.1145/3219819.3219845) and [Robust Anomaly Detection for Multivariate Time Series through Stochastic Recurrent Neural Network](https://dl.acm.org/doi/10.1145/3292500.3330672)<br/>
-Corresponding Download Versions: [OmniAnomaly](https://github.com/NetManAIOps/OmniAnomaly)
+- Access: open ODDS download page.
+- Notes: tabular/network dataset with temporal-adjacent usage in anomaly-detection benchmarks; validate suitability for sequence models before use.
 
-## [SUTD & iTrust Dataset Collection](https://itrust.sutd.edu.sg/itrust-labs_datasets/)
-> This dataset has to be [requested](https://docs.google.com/forms/d/e/1FAIpQLSdwOIR-LuFnSu5cIAzun5OQtWXcsOhmC7NtTbb-LBI1MyOcug/viewform) for access.
+### [Wind Turbine SCADA Open Data](https://github.com/sltzgs/Wind_Turbine_SCADA_open_data)
 
-This collection of datasets provided by the _Singapur University of Technology and Design_ and the _iTrust Centre for Research in Cyber Security_ contains 5 different datasets suitable for benchmarking anomaly detection algorithms derived from the two available main datasets SWAT and WADI (see below).<br/>
+Curated repository linking multiple open wind-turbine SCADA datasets from different wind farms.
+
+- Access: mixed; some sources require platform registration or an application.
+- Domain: renewable-energy operations, turbine telemetry, condition monitoring, and fault detection.
+
+### [Wind Turbine SCADA for Early Fault Detection](https://zenodo.org/records/10958775)
+
+Real-world SCADA data from three wind farms, released for wind-turbine anomaly and early-fault detection.
+
+- Access: open Zenodo record.
+- Publication: [CARE to Compare: A real-world dataset for anomaly detection in wind turbine data](https://arxiv.org/abs/2404.10320).
+
+### [Tennessee Eastman Process Simulation](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/6C3JR1) (TEP)
+
+A standard industrial process-control benchmark built around simulated plant operations and process faults.
+
+- Access: open Harvard Dataverse record.
+- Helpful resources: [TEP introduction](https://keepfloyding.github.io/posts/Ten-East-Proc-Intro/) and [PyTEP](https://github.com/ccreinartz11/pytep).
+- Notes: PyTEP requires an activated MATLAB/Simulink license for customized simulations.
+
+### [Server Machine Dataset](https://github.com/NetManAIOps/OmniAnomaly) (SMD)
+
+Server-machine telemetry used for multivariate anomaly detection in operations monitoring.
+
+- Access: public through the OmniAnomaly repository.
+- Publication: [Robust Anomaly Detection for Multivariate Time Series through Stochastic Recurrent Neural Network](https://dl.acm.org/doi/10.1145/3292500.3330672).
+
+### [GECCO 2018 Drinking Water Quality](https://zenodo.org/records/3884398)
+
+Water-quality sensor data from the GECCO 2018 Industrial Challenge on online anomaly detection for drinking-water monitoring.
+
+- Access: open Zenodo record; original challenge page: [GECCO 2018](https://www.spotseven.de/gecco/gecco-challenge/gecco-challenge-2018/).
+- Domain: environmental IoT and water-quality event detection.
+
+### [Application Server Dataset](https://github.com/zhhlee/InterFusion/tree/main) (ASD)
+
+Application-server metrics from a large Internet company, released with the InterFusion benchmark material.
+
+- Access: public GitHub repository.
+- Publication: [Multivariate Time Series Anomaly Detection and Interpretation using Hierarchical Inter-Metric and Temporal Embedding](https://dl.acm.org/doi/10.1145/3447548.3467075).
+
+### [NASA SMAP and MSL](https://github.com/khundman/telemanom)
+
+Spacecraft telemetry from NASA's Soil Moisture Active Passive satellite and Mars Science Laboratory rover.
+
+- Access: processed benchmark data in [Telemanom](https://github.com/khundman/telemanom) and [OmniAnomaly](https://github.com/NetManAIOps/OmniAnomaly); source programs: [SMAP](https://nsidc.org/data/smap/data) and [MSL](https://pds-atmospheres.nmsu.edu/data_and_services/atmospheres_data/Mars/Mars.html).
+- Publications: [Detecting Spacecraft Anomalies Using LSTMs and Nonparametric Dynamic Thresholding](https://dl.acm.org/doi/10.1145/3219819.3219845) and [OmniAnomaly](https://dl.acm.org/doi/10.1145/3292500.3330672).
+
+### [SUTD iTrust Dataset Collection](https://itrust.sutd.edu.sg/itrust-labs_datasets/)
+
+Cyber-physical security datasets from Singapore University of Technology and Design and the iTrust Centre for Research in Cyber Security.
+
+- Access: request required through the iTrust form.
+- Main datasets: [SWaT](https://itrust.sutd.edu.sg/itrust-labs-home/itrust-labs_swat/) and [WADI](https://itrust.sutd.edu.sg/itrust-labs-home/itrust-labs_wadi/).
 
 #### [Secure Water Treatment](https://itrust.sutd.edu.sg/itrust-labs-home/itrust-labs_swat/) (SWaT)
-The Secure Water Treatment (SWaT) dataset is a collection of data from a water treatment testbed, covering 11 days of continuous operation—7 days under normal conditions and 4 days with deliberate attack scenarios.
-The dataset includes network traffic and readings from 51 sensors and actuators, with labels indicating normal and abnormal behaviors
-During the 4 days of attacks, 41 different attack scenarios were executed based on a cyber-physical system (CPS) attack model developed by the research team.
 
-#### [Water Distriubtion](https://itrust.sutd.edu.sg/itrust-labs-home/itrust-labs_wadi/) (WADI)
-The Water Distribution (WADI) dataset captures data from a water distribution testbed that operated continuously for 16 days: 14 days under normal conditions and 2 days featuring deliberate attack scenarios.
-The dataset includes readings from 123 sensors and actuators. The attack scenarios are based on a cyber-physical system (CPS) attack model developed by the research team.
-During the 2 days of attacks, 15 distinct attack scenarios were executed.
+Water-treatment testbed data with normal operation and deliberate cyber-physical attack scenarios.
 
-## [Industrial Control System (ICS) Cyber Attack Datasets](https://sites.google.com/a/uah.edu/tommy-morris-uah/ics-data-sets)
-Datasets for the topics (1) Power Systems, (2) Gas Pipelines, (3) Water Storage Tanks and (4) Energy Management Systems (EMS).
+- Scope: 11 days of operation, including 7 days normal and 4 days under attack.
+- Signals: 51 sensors and actuators with normal/abnormal labels.
 
-## [Unknown Kaggle Dataset: Rate Anomalies](https://www.kaggle.com/datasets/drscarlat/time-series)
-Dataset with 509k instances with 11 features and an anomaly density of just 0.09% making it an interesting candidate as a realistic benchmarking dataset.
+#### [Water Distribution](https://itrust.sutd.edu.sg/itrust-labs-home/itrust-labs_wadi/) (WADI)
 
-## [Airbus Helicopter Accelerometer](https://www.research-collection.ethz.ch/handle/20.500.11850/415151)
-Airbus SAS provides the Helicopter Vibration Measurement Dataset to automate the validation of vibration data and detect abnormal sensor behavior. Vibration measurements are collected from accelerometers placed at various positions on helicopters, measuring in three directions: longitudinal, vertical, and lateral.
+Water-distribution testbed data with normal operation and deliberate attack scenarios.
 
-## [Pooled Server Metric](https://github.com/eBay/RANSynCoders/tree/main/data) (PSM)
-The multivariate PSM dataset comprises 90 key performance indices (KPIs) from eBay. It captures per-minute cart volumes across various subdimensions, such as user location, device type, and cart type, making it suitable for analyzing temporal and spatial dependencies that reflect business availability and health.
+- Scope: 16 days of operation, including 14 days normal and 2 days under attack.
+- Signals: 123 sensors and actuators with attack periods.
 
-Related Publications: [Practical Approach to Asynchronous Multivariate Time Series Anomaly Detection and Localization](https://dl.acm.org/doi/10.1145/3447548.3467174) and  [Real-Time Synchronization in Neural Networks for Multivariate Time Series Anomaly Detection](https://ieeexplore.ieee.org/document/9413847)
+### [Industrial Control System Cyber Attack Datasets](https://sites.google.com/a/uah.edu/tommy-morris-uah/ics-data-sets)
 
-## [3W](https://github.com/petrobras/3W) (Petrobas)
-The 3W dataset consists of instances from three different sources containing undesirable events occurring in oil wells.
-Accompanying this dataset is the 3W Toolkit, a software package designed to facilitate experimentation with the dataset for specific problems related to oil well operations.
+A University of Alabama in Huntsville collection covering cyber attacks and faults in industrial-control settings.
 
-Related Publications: [A realistic and public dataset with rare undesirable real events in oil wells](https://www.sciencedirect.com/science/article/pii/S0920410519306357?via%3Dihub)
+- Access: public dataset page.
+- Domains: power systems, gas pipelines, water storage tanks, and energy-management systems.
 
-## [Drive End Bearing Faults](https://engineering.case.edu/bearingdatacenter/download-data-file)
-Data was collected for normal bearings, single-point drive end, and fan end defects.
+### [Rate Anomalies](https://www.kaggle.com/datasets/drscarlat/time-series)
 
-## [Gearbox Faults](https://search-data.ubfc.fr/FR-13002091000019-2023-03-06_LASPI-Detection-and-diagnostics-of-gearbox.html) (LAPSI)
-Dataset of current, voltage, and vibration measurements of an electromechanical driving system.
-The system is a three-phase asynchronous motor that drives a gearbox.
+Kaggle dataset with roughly 509k rows, 11 features, and a very low anomaly density.
 
-## [Rotor and Stator Faults in Rotating Machines](https://search-data.ubfc.fr/FR-13002091000019-2023-03-06-03_AMPERE-Detection-and-diagnostics-of-rotor-and.html) (AMPERE)
-Dataset of speed, current, voltage, and vibration measurements of an electromechanical drive system.
-The system is a three-phase asynchronous motor.
+- Access: Kaggle account may be required.
+- Notes: useful as a realistic imbalance case; provenance is less clear than archival or paper-backed datasets.
 
-## [HIL-based Augmented ICS Security](https://github.com/icsdataset/hai) (HAI)
-The HAI dataset was collected from a realistic industrial control system (ICS) testbed augmented with a Hardware-In-the-Loop (HIL) simulator that emulates steam-turbine power generation and pumped-storage hydropower generation.
+### [Airbus Helicopter Accelerometer](https://www.research-collection.ethz.ch/handle/20.500.11850/415151)
 
-## [Industrial Control System Cyber Attack Datasets](https://sites.google.com/a/uah.edu/tommy-morris-uah/ics-data-sets)
-A collection of three datasets regarding power systems, gas pipelines, and water storage tanks.
+Helicopter vibration measurements from accelerometers placed at multiple positions and directions.
 
-## [Localization Data for Person Activity](https://archive.ics.uci.edu/dataset/196/localization+data+for+person+activity)
-Data contains recordings of five people performing different activities.
-Each person wore four sensors while performing the same scenario five times.
+- Access: ETH Research Collection record.
+- Domain: aerospace vibration validation and abnormal sensor behavior detection.
 
-Refactored Version: [Kaggle](https://www.kaggle.com/datasets/jorekai/anomaly-detection-falling-people-events)
+### [Pooled Server Metrics](https://github.com/eBay/RANSynCoders/tree/main/data) (PSM)
 
-## [EDEN ISS 2020 Telemetry Dataset](https://zenodo.org/records/11485183)
-The EDEN ISS 2020 Telemetry Dataset consists of equidistant sensor readings stemming from 97 sensors in the [EDEN ISS](https://eden-iss.net/) research greenhouse.
+Multivariate eBay KPI data with per-minute cart-volume metrics across business and user subdimensions.
 
-Related Publications: [Unraveling Anomalies in Time: Unsupervised Discovery and Isolation of Anomalous Behavior in Bio-regenerative Life Support System Telemetry](https://arxiv.org/pdf/2406.09825v1)
+- Access: public GitHub repository.
+- Publications: [Practical Approach to Asynchronous Multivariate Time Series Anomaly Detection and Localization](https://dl.acm.org/doi/10.1145/3447548.3467174) and [Real-Time Synchronization in Neural Networks for Multivariate Time Series Anomaly Detection](https://ieeexplore.ieee.org/document/9413847).
 
-# Benchmark Collections
+### [3W](https://github.com/petrobras/3W)
 
-## [UCR Time Series Anomaly Archive (Download Link)](https://www.cs.ucr.edu/~eamonn/time_series_data_2018/UCR_TimeSeriesAnomalyDatasets2021.zip) 💼
-Archive of time-series data for anomaly detection that compensates shortcomings of other available datasets for anomaly detection as stated in the corresponding publication(s).
+Oil-well time-series instances containing rare undesirable events, released with tooling for dataset exploration and experimentation.
 
-Corresponding Publication: [Current Time Series Anomaly Detection Benchmarks are Flawed and are Creating the Illusion of Progress](https://arxiv.org/abs/2009.13807)
+- Access: public GitHub repository.
+- Publication: [A realistic and public dataset with rare undesirable real events in oil wells](https://www.sciencedirect.com/science/article/pii/S0920410519306357).
 
-## [Time-Series Benchmarking Suite for Univariate Anomaly Detection](https://github.com/TheDatumOrg/TSB-UAD) (TSB-UAD) 💼
-TSB-UAD is a new open, end-to-end benchmark suite to ease the evaluation of univariate time-series anomaly detection methods. Overall, TSB-UAD contains 12686 separate time series with labeled anomalies spanning different domains with high variability of anomaly types, ratios, and sizes.
+### [Case Western Reserve University Bearing Data](https://engineering.case.edu/bearingdatacenter/download-data-file) (CWRU)
 
-Related Repository: [Towards A Reliable Time-Series Anomaly Detection Benchmark](https://github.com/TheDatumOrg/TSB-AD) (TSB-AD) 💼
+Bearing vibration data for normal bearings and single-point drive-end and fan-end defects.
 
-## [Skoltech Anomaly Benchmark](https://github.com/waico/SKAB) (SKAB) 💼
-The SKAB is a comprehensive framework designed for evaluating anomaly detection algorithms, focusing on outlier and changepoint detection in multivariate time series data.
-SKAB includes datasets, leaderboards, evaluation modules, and Python tools to support algorithm testing. The dataset consists of 35 files of time series data from sensors monitoring a testbed, with each file containing a single experiment and associated anomaly.
-SKAB provides both single-point and collective anomaly labels, making it useful for benchmarking various detection algorithms.
+- Access: public download page.
+- Domain: rotating machinery and fault diagnosis.
 
-## [Numenta Anomaly Benchmark](https://www.numenta.com/resources/htm/numenta-anomoly-benchmark/) (NAB) 💼
-The NAB is a comprehensive framework designed to evaluate anomaly detection algorithms specifically for real-time, streaming data applications.
-It includes over 50 labeled time-series datasets from both real-world and synthetic sources, along with a novel scoring mechanism tailored for real-time detection scenarios.
-NAB provides tools for testing algorithms, a leaderboard for competitive results, and encourages contributions and collaboration from the community.
-The benchmark and its associated resources support the development and assessment of algorithms in unsupervised real-time anomaly detection.
+### [Gearbox Faults](https://search-data.ubfc.fr/FR-13002091000019-2023-03-06_LASPI-Detection-and-diagnostics-of-gearbox.html) (LASPI)
 
-## [Controlled Anomalies Time-Series](https://zenodo.org/records/8338435) (CATS) 💼
-The CATS dataset is a simulated dataset designed for benchmarking anomaly detection algorithms in multivariate time series.
-It includes 17 variables representing sensor readings, control commands, and external stimuli, with 200 precisely injected anomalies across 5 million timestamps.
-The dataset offers fine control over ground truth, the context for anomalies, and a pure signal without noise, making it ideal for evaluating the performance, robustness, and explainability of anomaly detection methods in a complex dynamical system.
+Current, voltage, and vibration measurements from an electromechanical drive system with gearbox faults.
 
-# Related Datasets
+- Access: UBFC data record.
+- Domain: gearbox fault detection and diagnosis.
 
-### [NYC Taxi Traffic](https://www.kaggle.com/datasets/julienjta/nyc-taxi-traffic) 🖇️
-Number of New York taxi passengers, with five anomalies occurring during the NYC marathon, Thanksgiving, Christmas, New Year's Day, and a snow storm.
+### [Rotor and Stator Faults in Rotating Machines](https://search-data.ubfc.fr/FR-13002091000019-2023-03-06-03_AMPERE-Detection-and-diagnostics-of-rotor-and.html) (AMPERE)
 
-### [Metro Interstate Traffic Volume](https://archive.ics.uci.edu/dataset/492/metro+interstate+traffic+volume) 🖇️
-Hourly Interstate 94 Westbound traffic volume for MN DoT ATR station 301, roughly midway between Minneapolis and St Paul, MN. Hourly weather features and holidays are included for impacts on traffic volume.
+Speed, current, voltage, and vibration measurements from a three-phase asynchronous motor system.
 
-### [Credit Card Frau Detection](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud) 🖇️
-Although not particularly a time-series dataset in the classical sense, the dataset shows transactions and their properties in chronological order. 
+- Access: UBFC data record.
+- Domain: rotating-machine fault detection and diagnosis.
 
-### [PaySim 2.0](https://github.com/BBQtime/Synthetic-Financial-Datasets-For-Fraud-Detection)
-Closely related to the credit card fraud dataset. See [here](https://www.kaggle.com/datasets/ealaxi/paysim1) for PaySim 1.0 on Kaggle.
+### [HIL-based Augmented ICS Security](https://github.com/icsdataset/hai) (HAI)
 
-# Data Hubs
+Industrial-control testbed data augmented with Hardware-in-the-Loop simulation for power generation and pumped-storage hydropower scenarios.
 
-## [EDP Open Data](https://www.edp.com/en/innovation/open-data/data) 🌐
-Platform providing open datasets in the context of solar photovoltaic, wind, and thermal technology.
+- Access: public GitHub repository.
+- Domain: ICS anomaly detection and cyber-physical security.
 
-## [Evaluation Datasets](https://timeeval.github.io/evaluation-paper/notebooks/Datasets.html) 🌐
-Lists univariate and multivariate time series anomaly detection datasets used in the experimental evaluation paper.
+### [Localization Data for Person Activity](https://archive.ics.uci.edu/dataset/196/localization+data+for+person+activity)
 
-## [PhysioNet Open Access Databases](https://physionet.org/about/database/) 🌐
-The repository provides free access to a large collection of medical research data, supporting biomedical research and education through the availability of physiological and clinical data alongside related open-source software.
+Sensor recordings from five people performing activity scenarios, commonly adapted for fall or rare-event detection.
 
-## [IEEE Dataport](https://ieee-dataport.org/) 🌐
-Public hub for dataset sharing in the context of IEEE publications.
+- Access: public UCI dataset page.
+- Refactored version: [Kaggle anomaly-detection falling events](https://www.kaggle.com/datasets/jorekai/anomaly-detection-falling-people-events).
 
-## [Zenodo](https://zenodo.org/search?q=anomaly%20detection%20time%20series&f=resource_type%3Adataset&f=access_status%3Aopen&f=file_type%3Acsv&f=file_type%3Atxt&f=file_type%3Azip&f=file_type%3Ahdf5&f=file_type%3Axlsx&l=list&p=1&s=10&sort=bestmatch) 🌐
-Open Science platform for dataset sharing and more.
+### [EDEN ISS 2020 Telemetry](https://zenodo.org/records/11485183)
+
+Equidistant telemetry from 97 sensors in the EDEN ISS research greenhouse.
+
+- Access: open Zenodo record.
+- Publication: [Unraveling Anomalies in Time](https://arxiv.org/pdf/2406.09825v1).
+
+### [Exathlon](https://github.com/exathlonbenchmark/exathlon)
+
+Benchmark for explainable anomaly detection over high-dimensional time series from repeated Apache Spark executions.
+
+- Access: public GitHub repository; dataset files are included under the repository data path.
+- Publication: [Exathlon: A Benchmark for Explainable Anomaly Detection over Time Series](https://arxiv.org/abs/2010.05073).
+
+### [Multi-Source Distributed System Data](https://zenodo.org/records/3549604) (MSDS)
+
+Multi-source observability data from an OpenStack system, including metrics, logs, traces, workloads, and injected faults.
+
+- Access: open Zenodo record.
+- Repository: [SashoNedelkoski/multi-source-observability-dataset](https://github.com/SashoNedelkoski/multi-source-observability-dataset/).
+- Domain: AIOps anomaly detection, root-cause analysis, and multimodal operations analytics.
+
+## Benchmark Collections
+
+### [UCR Time Series Anomaly Archive](https://www.cs.ucr.edu/~eamonn/time_series_data_2018/UCR_TimeSeriesAnomalyDatasets2021.zip)
+
+A large archive of univariate time-series anomaly-detection datasets designed to address common benchmark flaws.
+
+- Access: direct ZIP download; alternative record: [Figshare](https://figshare.com/articles/dataset/UCR_Time_Series_Anomaly_Detection_datasets_2021_/26410744).
+- Publication: [Current Time Series Anomaly Detection Benchmarks are Flawed and are Creating the Illusion of Progress](https://arxiv.org/abs/2009.13807).
+
+### [Time-Series Benchmarking Suite for Univariate Anomaly Detection](https://github.com/TheDatumOrg/TSB-UAD) (TSB-UAD)
+
+Open benchmark suite for evaluating univariate time-series anomaly-detection methods across many labeled series and domains.
+
+- Access: public GitHub repository.
+- Related repository: [TheDatumOrg/TSB-AD](https://github.com/TheDatumOrg/TSB-AD).
+
+### [Skoltech Anomaly Benchmark](https://github.com/waico/SKAB) (SKAB)
+
+Multivariate benchmark built from sensor readings of a testbed under different anomaly and changepoint scenarios.
+
+- Access: public GitHub repository.
+- Includes: datasets, evaluation utilities, examples, and benchmark tooling.
+
+### [Numenta Anomaly Benchmark](https://github.com/numenta/NAB) (NAB)
+
+Streaming anomaly-detection benchmark with labeled real and synthetic time series plus a scoring system for real-time detection.
+
+- Access: public GitHub repository; overview page: [Numenta NAB resource](https://www.numenta.com/resources/htm/numenta-anomoly-benchmark/).
+- Notes: useful for online detection experiments; scoring assumptions differ from pointwise offline benchmarks.
+
+### [Controlled Anomalies Time-Series](https://zenodo.org/records/8338435) (CATS)
+
+Simulated multivariate benchmark with controlled anomaly injection and detailed ground truth.
+
+- Access: open Zenodo record.
+- Scope: 17 variables, 5 million timestamps, and 200 injected anomalies.
+
+### [TimeEval Dataset Collection](https://timeeval.github.io/evaluation-paper/notebooks/Datasets.html)
+
+Dataset overview behind the TimeEval evaluation work, covering many univariate and multivariate anomaly-detection datasets.
+
+- Access: public overview and linked downloads.
+- Tooling: [TimeEval](https://github.com/TimeEval/TimeEval).
+- Notes: a useful cross-check for dataset provenance, dimensions, labels, and benchmark metadata.
+
+### [mTSBench](https://github.com/PLAN-Lab/mTSBench)
+
+Large-scale benchmark for multivariate time-series anomaly detection and model selection.
+
+- Access: public GitHub repository with dataset-loading guidance.
+- Publication: [mTSBench: Benchmarking Multivariate Time Series Anomaly Detection and Model Selection at Scale](https://arxiv.org/abs/2506.21550).
+
+## Related Datasets
+
+These datasets are not always direct anomaly-detection benchmarks, but they are useful for rare-event detection, temporal outlier detection, event detection, or realistic preprocessing examples.
+
+### [NYC Taxi Traffic](https://www.kaggle.com/datasets/julienjta/nyc-taxi-traffic)
+
+Passenger-count time series with known unusual events such as holidays, the NYC marathon, and a snow storm.
+
+### [Metro Interstate Traffic Volume](https://archive.ics.uci.edu/dataset/492/metro+interstate+traffic+volume)
+
+Hourly traffic volume on Interstate 94 with weather and holiday covariates.
+
+### [Credit Card Fraud Detection](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud)
+
+Chronologically ordered credit-card transactions with highly imbalanced fraud labels.
+
+- Notes: not a classical time-series dataset, but useful for temporal fraud-detection baselines.
+
+### [PaySim](https://github.com/BBQtime/Synthetic-Financial-Datasets-For-Fraud-Detection)
+
+Synthetic mobile-money transaction data for fraud-detection experiments.
+
+- Related Kaggle dataset: [PaySim 1.0](https://www.kaggle.com/datasets/ealaxi/paysim1).
+
+### [Daphnet Freezing of Gait](https://archive.ics.uci.edu/dataset/245/daphnet+freezing+of+gait)
+
+Wearable accelerometer recordings from Parkinson's disease patients with annotated freezing-of-gait episodes.
+
+- Access: public UCI dataset page.
+- Domain: wearable health monitoring and rare-event detection in multivariate sensor streams.
+
+### [CalIt2 Building People Counts](https://archive.ics.uci.edu/dataset/156/calit2+building+people+counts)
+
+Two-stream people-count data from the UCI CalIt2 building, used for detecting unusual building events.
+
+- Access: public UCI dataset page.
+- Domain: urban/building event detection.
+
+## Data Hubs and Catalogs
+
+### [EDP Open Data](https://www.edp.com/en/innovation/open-data/data)
+
+Open datasets for solar photovoltaic, wind, and thermal-energy technology.
+
+### [Open Time Series](https://opentimeseries.com/datasets/public_datasets/)
+
+Catalog of public time-series dataset portals, benchmark collections, and domain-specific sources.
+
+### [PhysioNet Open Access Databases](https://physionet.org/about/database/)
+
+Large collection of physiological and clinical research data with software and documentation.
+
+### [IEEE DataPort](https://ieee-dataport.org/)
+
+Dataset sharing platform connected to IEEE research publications.
+
+### [Zenodo Time-Series Anomaly Search](https://zenodo.org/search?q=anomaly%20detection%20time%20series&f=resource_type%3Adataset&f=access_status%3Aopen&f=file_type%3Acsv&f=file_type%3Atxt&f=file_type%3Azip&f=file_type%3Ahdf5&f=file_type%3Axlsx&l=list&p=1&s=10&sort=bestmatch)
+
+Open-science search for time-series anomaly-detection datasets across CSV, TXT, ZIP, HDF5, and XLSX records.
+
+### [Hugging Face Datasets](https://huggingface.co/datasets?sort=trending&search=time+series+anomaly)
+
+Community dataset hub with an increasing number of time-series and anomaly-detection dataset mirrors.
+
+## Contributing
+
+Contributions are welcome. Please prefer official sources and include enough context for readers to decide whether a dataset fits their benchmark.
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the recommended entry format and review checklist.

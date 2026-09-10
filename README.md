@@ -29,11 +29,11 @@ These are not the only possible defects. Label provenance, sampling and preproce
 
 ## Univariate Datasets
 
-### [Yahoo! S5](https://webscope.sandbox.yahoo.com/catalog.php?datatype=s&did=70)
+### [Yahoo! S5](https://huggingface.co/datasets/YahooResearch/ydata-labeled-time-series-anomalies-v1_0)
 
 Synthetic and real Yahoo service time series released through Yahoo Webscope for anomaly-detection research.
 
-- Access: request required through Yahoo Webscope.
+- Access: gated download from the YahooResearch collection on Hugging Face; accepting the Yahoo Dataset Terms of Use is required.
 - Notes: often used as a classic univariate anomaly-detection benchmark; check the Webscope terms before redistribution.
 - **Benchmark caveat:** published audits report trivial cases, label problems, and run-to-failure bias in parts of S5. A recent review recommends retaining A1 only after filtering problematic series rather than treating A1–A4 as uniformly valid benchmarks. See [Wu and Keogh](https://arxiv.org/abs/2009.13807) and [Barrish and van Vuuren](https://openreview.net/forum?id=RyMLAr5tFU).
 
@@ -43,7 +43,6 @@ KPI time series from the AIOps Challenge series for detecting anomalies in large
 
 - Access: public GitHub repositories.
 - Included editions: [AIOps 2018](https://github.com/NetManAIOps/KPI-Anomaly-Detection), [AIOps 2019](https://github.com/NetManAIOps/MultiDimension-Localization), [AIOps 2020](https://github.com/NetManAIOps/AIOps-Challenge-2020-Data).
-- Related pages: [2018 announcement](https://competition.aiops-challenge.com/home/competition/1484452272200032281), [2019 announcement](https://competition.aiops-challenge.com/home/competition/1484446614851493956), [2020 announcement](https://competition.aiops-challenge.com/home/competition/1484441527290765368).
 
 ### [Mackey-Glass Anomaly Benchmark](https://zenodo.org/records/3760086) (MGAB)
 
@@ -71,11 +70,11 @@ Expert-curated single-channel telemetry fragments from ESA's OPS-SAT CubeSat, in
 
 ## Multivariate Datasets
 
-### [SMTP](https://odds.cs.stonybrook.edu/smtp-kddcup99-dataset/)
+### [SMTP](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.fetch_kddcup99.html)
 
 A modified subset of KDD Cup 1999 network traffic records used for outlier and attack detection.
 
-- Access: open ODDS download page.
+- Access: available through scikit-learn with `fetch_kddcup99(subset="smtp")`.
 - Notes: tabular/network dataset with temporal-adjacent usage in anomaly-detection benchmarks; validate suitability for sequence models before use.
 
 ### [Kitsune Network Attack](https://archive.ics.uci.edu/dataset/516/kitsune+network+attack)
@@ -229,7 +228,7 @@ Labeled leak and no-leak sensor signals from a laboratory-scale water distributi
 
 - Access: open Mendeley Data record.
 - Signals: accelerometer, hydrophone, and dynamic-pressure measurements under multiple leak types, network topologies, and background conditions.
-- Publication: [Benchmarking dataset for leak detection and localization in water distribution systems](https://www.sciencedirect.com/science/article/pii/S2352340923002676).
+- Publication: [Benchmarking dataset for leak detection and localization in water distribution systems](https://pubmed.ncbi.nlm.nih.gov/37128586/).
 
 ### [Rate Anomalies](https://www.kaggle.com/datasets/drscarlat/time-series)
 
@@ -238,7 +237,7 @@ Kaggle dataset with roughly 509k rows, 11 features, and a very low anomaly densi
 - Access: Kaggle account may be required.
 - Notes: useful as a realistic imbalance case; provenance is less clear than archival or paper-backed datasets.
 
-### [Airbus Helicopter Accelerometer](https://www.research-collection.ethz.ch/handle/20.500.11850/415151)
+### [Airbus Helicopter Accelerometer](https://www.research-collection.ethz.ch/items/a4acb31d-9711-4843-8a60-e2468c0326be)
 
 Helicopter vibration measurements from accelerometers placed at multiple positions and directions.
 

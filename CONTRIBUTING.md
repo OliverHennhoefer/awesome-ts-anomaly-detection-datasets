@@ -15,9 +15,10 @@ One or two sentences describing what the dataset contains and why it is useful f
 - Domain: short domain description.
 - Publication: [Paper title](https://paper.example).
 - Repository: [owner/repo](https://github.com/owner/repo).
+- **Benchmark caveat:** concise, sourced limitation on benchmark interpretation.
 ```
 
-Only include the fields that apply. Prefer official dataset pages, archival records, and maintained repositories over mirrors.
+Only include the fields that apply. Prefer official dataset pages, archival records, and maintained repositories over mirrors. Use the benchmark-caveat field only for a documented limitation, and link the supporting publication or maintainer note.
 
 ## Review Checklist
 
@@ -25,8 +26,9 @@ Only include the fields that apply. Prefer official dataset pages, archival reco
 - The link points to an official source, archival record, or clearly maintained repository.
 - Access requirements are stated honestly.
 - The description is factual and does not overstate benchmark quality.
+- Published benchmark-quality concerns are summarized without turning them into unsupported quality ratings.
 - Publications, repositories, and mirrors are labeled as such.
-- The entry avoids emoji and keeps formatting consistent with the README.
+- The entry keeps the **Benchmark caveat** marker and other formatting consistent with the README.
 
 ## Scope
 

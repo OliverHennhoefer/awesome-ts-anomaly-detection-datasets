@@ -1,25 +1,31 @@
-# Awesome Time-Series Anomaly Detection Datasets [![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+# Awesome Time-Series Anomaly Detection Datasets [![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md) [![Links](https://github.com/OliverHennhoefer/awesome-ts-anomaly-detection-datasets/actions/workflows/links.yml/badge.svg)](https://github.com/OliverHennhoefer/awesome-ts-anomaly-detection-datasets/actions/workflows/links.yml)
 
 A curated list of public and research-accessible datasets for time-series anomaly detection, event detection, fault detection, and closely related benchmarking tasks.
 
 The focus is on datasets with temporal structure and a plausible anomaly-detection use case. Some datasets are directly labeled for anomalies, while others are commonly used through benchmark preprocessing, rare-event labels, domain events, or fault classes.
 
+> [!IMPORTANT]
+> **Benchmark quality matters.** Widely used time-series anomaly datasets can contain trivial anomalies, unusually high anomaly rates, ambiguous or incorrect labels, or artifacts that make benchmark results misleading. [Wu and Keogh](https://arxiv.org/abs/2009.13807) documented these recurring problems and introduced the UCR Time Series Anomaly Archive partly in response. Inclusion here therefore means that a dataset is relevant and obtainable, not that it is endorsed as a high-quality benchmark. Entries with documented concerns include a **Benchmark caveat** explaining the limitation.
+
 ## Contents
 
-- [Selection Notes](#selection-notes)
+- [On Benchmark Quality](#on-benchmark-quality)
 - [Univariate Datasets](#univariate-datasets)
 - [Multivariate Datasets](#multivariate-datasets)
 - [Benchmark Collections](#benchmark-collections)
 - [Related Datasets](#related-datasets)
 - [Data Hubs and Catalogs](#data-hubs-and-catalogs)
-- [Contributing](#contributing)
 
-## Selection Notes
+## On Benchmark Quality
 
-- Prefer official dataset pages, archival records, or maintained repositories over reuploads.
-- Keep access requirements visible: open download, request form, login, or license restrictions.
-- Include datasets that are useful for benchmarking, even if the original task is fault detection, event detection, operations monitoring, or rare-event classification.
-- Avoid treating benchmark scores as directly comparable unless preprocessing, label policy, point adjustment, and metrics are aligned.
+Dataset availability and benchmark suitability are different questions. Four useful screening criteria identified by [Wu and Keogh](https://doi.org/10.1109/TKDE.2021.3112126) are:
+
+- **Trivial anomalies:** simple rules can solve many cases without learning meaningful temporal structure.
+- **Unrealistic anomaly prevalence:** anomaly density is too high to represent the rare-event setting being claimed.
+- **Questionable ground truth:** labels are missing, ambiguous, misaligned, or incorrect.
+- **Run-to-failure or positional shortcuts:** anomalies cluster near the end of a series, allowing location rather than behavior to drive detection.
+
+These are not the only possible defects. Label provenance, sampling and preprocessing choices, selection bias, leakage, and evaluation metrics also matter. A **Benchmark caveat** accompanies entries with a documented limitation or an important restriction on interpretation; it does not mean that a dataset lacks value for reproducibility, historical comparison, a specific application, or pipeline testing. A recent broader discussion is available in [Aligning time series anomaly detection research with practical applications](https://openreview.net/forum?id=RyMLAr5tFU).
 
 ## Univariate Datasets
 
@@ -29,6 +35,7 @@ Synthetic and real Yahoo service time series released through Yahoo Webscope for
 
 - Access: request required through Yahoo Webscope.
 - Notes: often used as a classic univariate anomaly-detection benchmark; check the Webscope terms before redistribution.
+- **Benchmark caveat:** published audits report trivial cases, label problems, and run-to-failure bias in parts of S5. A recent review recommends retaining A1 only after filtering problematic series rather than treating A1–A4 as uniformly valid benchmarks. See [Wu and Keogh](https://arxiv.org/abs/2009.13807) and [Barrish and van Vuuren](https://openreview.net/forum?id=RyMLAr5tFU).
 
 ### [AIOps KPI Anomaly Detection](https://github.com/NetManAIOps/KPI-Anomaly-Detection)
 
@@ -59,6 +66,15 @@ Real service and client telemetry time series from Microsoft cloud monitoring sc
 
 - Access: public GitHub repository.
 - Domain: production cloud telemetry, service rates, latencies, crash rates, and related operational metrics.
+
+### [OPS-SAT Anomaly Detection Dataset](https://doi.org/10.5281/zenodo.12588359) (OPSSAT-AD)
+
+Expert-curated single-channel telemetry fragments from ESA's OPS-SAT CubeSat, including operational data gaps, sampling-rate changes, and other real-world artifacts.
+
+- Access: open Zenodo record; code and benchmark splits are available in [kplabs-pl/OPS-SAT-AD](https://github.com/kplabs-pl/OPS-SAT-AD).
+- Scope: 2,123 fragments from 9 telemetry channels, with operator-reviewed anomaly labels.
+- Publication: [The OPS-SAT benchmark for detecting anomalies in satellite telemetry](https://doi.org/10.1038/s41597-025-05035-3).
+- **Benchmark caveat:** this is a curated fragment benchmark in which 20% of fragments are anomalous; that prevalence reflects selection and should not be interpreted as the natural anomaly rate of an uninterrupted telemetry stream.
 
 ## Multivariate Datasets
 
@@ -115,6 +131,15 @@ A standard industrial process-control benchmark built around simulated plant ope
 - Helpful resources: [TEP introduction](https://keepfloyding.github.io/posts/Ten-East-Proc-Intro/) and [PyTEP](https://github.com/ccreinartz11/pytep).
 - Notes: PyTEP requires an activated MATLAB/Simulink license for customized simulations.
 
+### [Batch Distillation Anomaly Detection Dataset](https://doi.org/10.5281/zenodo.17395543)
+
+Data from 119 physical laboratory experiments on a batch-distillation plant, covering varied operating conditions and paired fault-free and deliberately induced-anomaly runs.
+
+- Access: open Zenodo record under CC BY 4.0.
+- Signals: 1 Hz time series from 18 sensors and 13 actuators, with measurement uncertainty, expert annotations, and anomaly metadata.
+- Publication: [Batch Distillation Data for Developing Machine Learning Anomaly Detection Methods](https://doi.org/10.1038/s41597-026-07124-3).
+- Notes: the measurements come from a physical plant, but the anomalies were deliberately induced rather than naturally occurring failures.
+
 ### [Server Machine Dataset](https://github.com/NetManAIOps/OmniAnomaly) (SMD)
 
 Server-machine telemetry used for multivariate anomaly detection in operations monitoring.
@@ -142,6 +167,16 @@ Spacecraft telemetry from NASA's Soil Moisture Active Passive satellite and Mars
 
 - Access: processed benchmark data in [Telemanom](https://github.com/khundman/telemanom) and [OmniAnomaly](https://github.com/NetManAIOps/OmniAnomaly); source programs: [SMAP](https://nsidc.org/data/smap/data) and [MSL](https://pds-atmospheres.nmsu.edu/data_and_services/atmospheres_data/Mars/Mars.html).
 - Publications: [Detecting Spacecraft Anomalies Using LSTMs and Nonparametric Dynamic Thresholding](https://dl.acm.org/doi/10.1145/3219819.3219845) and [OmniAnomaly](https://dl.acm.org/doi/10.1145/3292500.3330672).
+- **Benchmark caveat:** the processed benchmark series have published concerns including label ambiguity, high anomaly density, and run-to-failure bias. Validate individual series and the preprocessing and label policy before using aggregate results to support general performance claims. See [Wu and Keogh](https://arxiv.org/abs/2009.13807).
+
+### [ESA Anomaly Dataset and Benchmark](https://zenodo.org/records/12528696) (ESA-AD / ESA-ADB)
+
+Large-scale real satellite telemetry from three ESA missions with anomaly annotations curated in collaboration with spacecraft operators; two missions are included in the accompanying benchmark.
+
+- Access: open Zenodo record; benchmark code: [kplabs-pl/ESA-ADB](https://github.com/kplabs-pl/ESA-ADB).
+- Scope: multivariate operational telemetry with anomalies and rare-but-nominal events represented separately.
+- Publication: [European Space Agency Benchmark for Anomaly Detection in Satellite Telemetry](https://arxiv.org/abs/2406.17826).
+- Notes: the raw data is large and the operator-oriented hierarchical evaluation is more involved than a plug-and-play pointwise benchmark.
 
 ### [SUTD iTrust Dataset Collection](https://itrust.sutd.edu.sg/itrust-labs_datasets/)
 
@@ -232,12 +267,13 @@ Multivariate eBay KPI data with per-minute cart-volume metrics across business a
 - Access: public GitHub repository.
 - Publications: [Practical Approach to Asynchronous Multivariate Time Series Anomaly Detection and Localization](https://dl.acm.org/doi/10.1145/3447548.3467174) and [Real-Time Synchronization in Neural Networks for Multivariate Time Series Anomaly Detection](https://ieeexplore.ieee.org/document/9413847).
 
-### [3W](https://github.com/petrobras/3W)
+### [3W Dataset 2.0.0](https://github.com/petrobras/3W) (3W)
 
-Oil-well time-series instances containing rare undesirable events, released with tooling for dataset exploration and experimentation.
+Oil-well time-series instances containing rare undesirable events, including real, simulated, and hand-drawn examples, released with tooling for dataset exploration and experimentation.
 
 - Access: public GitHub repository.
-- Publication: [A realistic and public dataset with rare undesirable real events in oil wells](https://www.sciencedirect.com/science/article/pii/S0920410519306357).
+- Notes: version 2.0.0 expands the instances and variables, adds a ninth undesirable-event class, and stores the data in Parquet format.
+- Publication: [3W Dataset 2.0.0: a realistic and public dataset with rare undesirable real events in oil wells](https://doi.org/10.1038/s41597-026-07225-z).
 
 ### [NoBOOM](https://www.kaggle.com/datasets/faebs94/noboom-anomaly-detection-in-chemical-processes)
 
@@ -334,6 +370,7 @@ Open benchmark suite for evaluating univariate time-series anomaly-detection met
 
 - Access: public GitHub repository.
 - Related repository: [TheDatumOrg/TSB-AD](https://github.com/TheDatumOrg/TSB-AD).
+- **Benchmark caveat:** this is a valuable collection and evaluation toolkit, but its constituent datasets differ substantially in label provenance, anomaly prevalence, and difficulty. Inclusion in the suite should not be treated as evidence that every constituent series is a sound benchmark; assess and report dataset-level filtering. See [Barrish and van Vuuren](https://openreview.net/forum?id=RyMLAr5tFU).
 
 ### [Skoltech Anomaly Benchmark](https://github.com/waico/SKAB) (SKAB)
 
@@ -348,6 +385,7 @@ Streaming anomaly-detection benchmark with labeled real and synthetic time serie
 
 - Access: public GitHub repository; overview page: [Numenta NAB resource](https://www.numenta.com/resources/htm/numenta-anomoly-benchmark/).
 - Notes: useful for online detection experiments; scoring assumptions differ from pointwise offline benchmarks.
+- **Benchmark caveat:** published audits identify trivial cases, label problems, unrealistic anomaly density, and positional bias in parts of the collection. Treat results per series rather than assuming uniform benchmark quality. See [Wu and Keogh](https://arxiv.org/abs/2009.13807).
 
 ### [Controlled Anomalies Time-Series](https://zenodo.org/records/8338435) (CATS)
 
@@ -363,6 +401,7 @@ Synthetic time-series anomaly generator and dataset collection integrated with T
 - Access: public GitHub repository and Python package.
 - Scope: configurable univariate and multivariate time series with multiple anomaly kinds.
 - Publication: [TimeEval: A Benchmarking Toolkit for Time Series Anomaly Detection Algorithms](https://vldb.org/pvldb/vol15/p3678-schmidl.pdf).
+- **Benchmark caveat:** the maintainers report an end-of-series smoothing artifact in most random-walk series from the published collection. The generator was fixed, but the original series remain available for reproducibility; see the [TimeEval dataset notes](https://timeeval.github.io/evaluation-paper/notebooks/Datasets.html).
 
 ### [TimeEval Dataset Collection](https://timeeval.github.io/evaluation-paper/notebooks/Datasets.html)
 
@@ -382,6 +421,22 @@ Large-scale benchmark for multivariate time-series anomaly detection and model s
 ## Related Datasets
 
 These datasets are not always direct anomaly-detection benchmarks, but they are useful for rare-event detection, temporal outlier detection, event detection, or realistic preprocessing examples.
+
+### [MIT-BIH Arrhythmia Database](https://physionet.org/content/mitdb/1.0.0/) (MITDB)
+
+Forty-eight half-hour, two-channel ambulatory ECG recordings with approximately 110,000 beat annotations produced independently by at least two cardiologists and resolved by consensus.
+
+- Access: open PhysioNet database under the Open Data Commons Attribution License.
+- Domain: cardiac arrhythmia and real-world physiological event detection.
+- **Benchmark caveat:** MITDB was not created as a generic anomaly-detection dataset. State how beat annotations are mapped to anomalies and filter recordings with unreasonably high anomaly density; see [Barrish and van Vuuren](https://openreview.net/forum?id=RyMLAr5tFU).
+
+### [MIT-BIH Supraventricular Arrhythmia Database](https://physionet.org/content/svdb/1.0.0/) (SVDB)
+
+Seventy-eight half-hour ECG recordings selected to supplement supraventricular-arrhythmia examples in MITDB.
+
+- Access: open PhysioNet database under the Open Data Commons Attribution License.
+- Domain: cardiac arrhythmia and real-world physiological event detection.
+- **Benchmark caveat:** SVDB was not created as a generic anomaly-detection dataset. State the anomaly-label mapping and filter recordings with unreasonably high anomaly density; see [Barrish and van Vuuren](https://openreview.net/forum?id=RyMLAr5tFU).
 
 ### [NYC Taxi Traffic](https://www.kaggle.com/datasets/julienjta/nyc-taxi-traffic)
 
@@ -454,9 +509,3 @@ Prognostics and Health Management Society repository for data challenges and con
 ### [ADRepository](https://github.com/mala-lab/ADBenchmarks-anomaly-detection-datasets)
 
 Research dataset repository for anomaly detection across modalities, including a dedicated time-series section.
-
-## Contributing
-
-Contributions are welcome. Please prefer official sources and include enough context for readers to decide whether a dataset fits their benchmark.
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for the recommended entry format and review checklist.

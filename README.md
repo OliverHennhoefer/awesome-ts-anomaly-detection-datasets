@@ -45,13 +45,6 @@ KPI time series from the AIOps Challenge series for detecting anomalies in large
 - Included editions: [AIOps 2018](https://github.com/NetManAIOps/KPI-Anomaly-Detection), [AIOps 2019](https://github.com/NetManAIOps/MultiDimension-Localization), [AIOps 2020](https://github.com/NetManAIOps/AIOps-Challenge-2020-Data).
 - Related pages: [2018 announcement](https://competition.aiops-challenge.com/home/competition/1484452272200032281), [2019 announcement](https://competition.aiops-challenge.com/home/competition/1484446614851493956), [2020 announcement](https://competition.aiops-challenge.com/home/competition/1484441527290765368).
 
-### [HexagonML / KDDCup2021 Practice Dataset](https://compete.hexagon-ml.com/practice/competition/39/#description)
-
-Competition-style time-series anomaly-detection data associated with the KDDCup2021 practice material.
-
-- Access: HexagonML login required for the competition page.
-- Public mirror: [intellygenta/KDDCup2021](https://github.com/intellygenta/KDDCup2021).
-
 ### [Mackey-Glass Anomaly Benchmark](https://zenodo.org/records/3760086) (MGAB)
 
 Synthetic Mackey-Glass time series with deliberately injected, non-trivial anomalies.
@@ -151,7 +144,7 @@ Server-machine telemetry used for multivariate anomaly detection in operations m
 
 Water-quality sensor data from the GECCO Industrial Challenges on online anomaly and event detection for drinking-water monitoring.
 
-- Access: open Zenodo records for [GECCO 2018](https://zenodo.org/records/3884398) and [GECCO 2019](https://zenodo.org/records/4304080); original challenge page: [GECCO 2018](https://www.spotseven.de/gecco/gecco-challenge/gecco-challenge-2018/).
+- Access: open Zenodo records for [GECCO 2018](https://zenodo.org/records/3884398) and [GECCO 2019](https://zenodo.org/records/4304080).
 - Domain: environmental IoT and water-quality event detection.
 
 ### [Application Server Dataset](https://github.com/zhhlee/InterFusion/tree/main) (ASD)
@@ -383,7 +376,7 @@ Multivariate benchmark built from sensor readings of a testbed under different a
 
 Streaming anomaly-detection benchmark with labeled real and synthetic time series plus a scoring system for real-time detection.
 
-- Access: public GitHub repository; overview page: [Numenta NAB resource](https://www.numenta.com/resources/htm/numenta-anomoly-benchmark/).
+- Access: public GitHub repository.
 - Notes: useful for online detection experiments; scoring assumptions differ from pointwise offline benchmarks.
 - **Benchmark caveat:** published audits identify trivial cases, label problems, unrealistic anomaly density, and positional bias in parts of the collection. Treat results per series rather than assuming uniform benchmark quality. See [Wu and Keogh](https://arxiv.org/abs/2009.13807).
 
@@ -474,7 +467,7 @@ Two-stream people-count data from the UCI CalIt2 building, used for detecting un
 
 ## Data Hubs and Catalogs
 
-### [EDP Open Data](https://www.edp.com/en/innovation/open-data/data)
+### [EDP Open Data](https://edp.com/en/innovation/data)
 
 Open datasets for solar photovoltaic, wind, and thermal-energy technology.
 

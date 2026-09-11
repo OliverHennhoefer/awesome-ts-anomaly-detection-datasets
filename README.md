@@ -237,7 +237,7 @@ Kaggle dataset with roughly 509k rows, 11 features, and a very low anomaly densi
 - Access: Kaggle account may be required.
 - Notes: useful as a realistic imbalance case; provenance is less clear than archival or paper-backed datasets.
 
-### [Airbus Helicopter Accelerometer](https://www.research-collection.ethz.ch/items/a4acb31d-9711-4843-8a60-e2468c0326be)
+### [Airbus Helicopter Accelerometer](https://doi.org/10.3929/ethz-b-000415151)
 
 Helicopter vibration measurements from accelerometers placed at multiple positions and directions.
 

@@ -25,5 +25,5 @@ jobs:
       - uses: actions/checkout@v5
       - uses: lycheeverse/lychee-action@v2
         with:
-          args: --accept-timeouts
+          args: --accept-timeouts --verbose --no-progress './**/*.md' './**/*.html' './**/*.rst'
           fail: true
